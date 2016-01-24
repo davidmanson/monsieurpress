@@ -13,21 +13,21 @@ var uglify = require('gulp-uglify');
 gulp.task('styles', function() {
     gulp.src('scss/**/*.scss')
         .pipe(compass({
-          css: 'css',
+          css: '.',
           sass: 'scss',
           image: 'images'
         }))
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('./css/'))
+        .pipe(gulp.dest('./'))
 });
 
 
 /* Minify */
 gulp.task('minify', function () {
-    gulp.src('css/**/*.css')
-        .pipe(minifyCSS())
+    gulp.src('style.css')
         .pipe(autoprefixer())
-        .pipe(gulp.dest('./css'));
+        .pipe(minifyCSS())
+        .pipe(gulp.dest('.'));
 });
 
 /* Image optim */

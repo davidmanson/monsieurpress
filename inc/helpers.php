@@ -24,21 +24,6 @@ function head_cleanup() {
 
 
 /*********************
- Enqueux async CSS style
- https://github.com/filamentgroup/loadCSS/
-*********************/
-function enqueue_async_style($file) {
-    $url = preg_replace("(https?:)", "", $file );
-    echo '<script>';
-    readfile(get_template_directory().'/library/dist/libs/loadcss.js');
-    echo 'loadCSS( "'.$url.'" );';
-    echo '</script>';
-    echo '<noscript><link href="'.$file.'" rel="stylesheet"></noscript>';
-}
-
-
-
-/*********************
 THEME SUPPORT
 *********************/
 function theme_support() {

@@ -6,8 +6,8 @@
 
 
 // LOAD LIBS
-require_once( 'library/helpers.php' );
-require_once( 'library/custom-post-type.php' );
+require_once( 'inc/helpers.php' );
+require_once( 'inc/custom-post-type.php' );
 
 
 
@@ -15,10 +15,6 @@ require_once( 'library/custom-post-type.php' );
 Let's get everything up and running.
 *************************************/
 function theme_init() {
-
-  add_editor_style( get_stylesheet_directory_uri() . '/library/css/editor-style.css' );
-
-  load_theme_textdomain( 'bonestheme', get_template_directory() . '/library/translation' );
 
   add_action( 'init', 'head_cleanup' );
   add_action( 'init', 'theme_support' );
@@ -43,6 +39,7 @@ if ( ! isset( $content_width ) ) {
 }
 
 
+
 /************************************
  Thumbnail size
 *************************************/
@@ -50,7 +47,6 @@ $thumb_realisation_ratio = 1.5;
 
 add_image_size( 'thumb-realisation-small', 350, round(350/$thumb_realisation_ratio), true );
 add_image_size( 'thumb-realisation-medium', 700, round(700/$thumb_realisation_ratio), true );
-
 
 
 
@@ -77,28 +73,26 @@ function theme_sidebars() {
 function assets_load() {
     if (is_admin()) return;
     
+    // Load jquery in the bottom
     wp_deregister_script( 'jquery' );
     wp_deregister_script( 'jquery-migrate');
     wp_register_script( 'jquery', includes_url( '/js/jquery/jquery.js' ), false, NULL, true );
-
+    
     // register scripts
-    wp_register_script( 'site-js', get_stylesheet_directory_uri() . '/library/js/scripts.js', array( 'jquery' ), '1.0', true );
-
-    // Enqueue scripts
+    wp_register_script( 'site-js', get_stylesheet_directory_uri() . '/js/scripts.js', array( 'jquery' ), '1.0', true );
+    
+    // Register styles
+    wp_register_style( 'site-stylesheet', get_stylesheet_directory_uri() . '/style.css', array(), '', 'all' );
+    
+    // Enqueue styles & scripts
+    wp_enqueue_style( 'site-stylesheet' );
     wp_enqueue_script( 'jquery');
     wp_enqueue_script( 'site-js' );
-
-    // Register styles
-    wp_register_style( 'site-small-stylesheet', get_stylesheet_directory_uri() . '/css/small.css', array(), '', 'all' );
-    wp_register_style( 'site-large-stylesheet', get_stylesheet_directory_uri() . '/css/large.css', array(), '', 'all' );
-    
-    // Enqueue styles
-    wp_enqueue_style( 'site-small-stylesheet' );
-
 }
 
 
 add_action('wp_enqueue_scripts', 'assets_load');
+
 
 
 /************************************
@@ -125,15 +119,4 @@ function add_load_web_font(){ ?>
   
 <?php
 }
-
-
-
-/************************************
- Async CSS Load
-*************************************/
-function add_load_css(){
-    enqueue_async_style(get_stylesheet_directory_uri() . '/css/large.css');
-}
-add_action('wp_head', 'add_load_css');
-
 ?>
