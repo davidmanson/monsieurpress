@@ -1,0 +1,21 @@
+/******************************************************************
+Theme Name: David MANSON
+Theme URI: http://www.david-manson.com
+Description: David Manson's portfolio website
+Author: David MANSON
+Author URI: http://www.david-manson.com
+Version: 1
+Tags: fluid-layout, responsive-layout, accessibility-ready, translation-ready, microformats, rtl-language-support
+
+License: WTFPL
+License URI: http://sam.zoy.org/wtfpl/
+*/
+
+/*
+Theme Check (http://wordpress.org/plugins/theme-check/)
+*/
+
+.sticky {}
+.gallery-caption {}
+.bypostauthor {}
+.screen-reader-text {}

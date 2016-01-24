@@ -1,0 +1,127 @@
+/*********************
+ HEADER WRAPPER
+*********************/
+.header {
+	background-color: $white;
+    background-color: #5AB7BE;
+    padding: .5em;
+    width: 100%;
+    box-shadow: 0 1px 2px rgba(0,0,0,.3);
+    position: fixed;
+    z-index: 999;
+    .single-post &{
+        border-bottom: 1px solid #efefef;   
+    }
+}
+
+
+
+/*********************
+ Global wrapper
+*********************/
+.site-content{
+    padding-top: $header-height;
+}
+
+
+/*********************
+ LOGO
+*********************/
+.site-logo img{
+    float: left;
+    display: block;
+    height: 24px;
+    width: auto;
+    box-sizing: content-box;
+    padding: ($header-height - 24)/2 0;
+}
+
+
+/*********************
+ NAVIGATION STYLES
+*********************/
+.menu-icon{
+    display: block;
+}
+
+.site-nav {
+    float: right;
+	border-bottom: 0;
+	margin: 0;
+    display: none;
+    text-align: left;
+    
+    .no-js &{
+        display: block;   
+    }
+    ul{
+        margin: 0;
+    }
+	li {
+
+		a {
+            font-size: 14px;
+            font-weight: 600;
+			display: block;
+			color: #575757;
+			text-decoration: none;
+			padding: 0.75em;
+		}
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+    /*********************
+    NAVIGATION STYLES
+    *********************/
+
+    .menu-icon{
+        display: none;   
+    }
+
+    .site-nav {
+        float: right;    
+        display: block !important;
+        border: 0;
+
+        ul {
+            background:$black;
+            margin-top:0;
+        }
+
+        li {
+            float: left;
+            position: relative;
+
+            a {
+                border-bottom: 0;
+                line-height: $header-height;
+                padding: 0 .75em;
+                &:hover, &:focus {
+                    color: $main-color;
+                }
+            }
+
+        }
+
+        /* highlight current page */
+        li.current-menu-item,
+        li.current_page_item,
+        li.current_page_ancestor {
+            a {
+                color: $main-color;
+            }
+        }
+    }
+}
+
+/*********************
+FOOTER STYLES
+*********************/
+
+.footer {
+	text-align: center;
+	background-color: #404040;
+	color: $light-gray;
+}

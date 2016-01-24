@@ -1,0 +1,52 @@
+/******************************************************************
+Site Name: MonsieurPress
+Author: David MANSON <contact@david-manson.com>
+
+Stylesheet: Grid Stylesheet
+******************************************************************/
+
+
+@include border-box-sizing;
+/************************
+       Container
+*************************/
+.container{
+    @include container();
+    padding: 0 gutter()*2;
+    @media (max-width: 767px){
+        max-width: 680px;
+    }
+}
+
+/************************
+   Columns
+*************************/
+@for $i from 1 through 12 {
+  .col-#{$i} {
+        @media screen and (min-width: 767px) {
+            @include span($i);
+        }
+        @media screen and (max-width: 767px) {
+            @include span(12 of 12 last);
+        }
+    }
+}
+
+/**********************************
+   Vertical & horizontal pusher
+**********************************/
+@for $i from 1 through 12 {
+    .col-push-#{$i} {
+        @include pre($i);   
+    }
+    .l-pad-#{$i}{   
+        padding: #{$i}em 0;
+    }
+}
+
+/************************
+   Helpers
+*************************/
+.col-last{
+    margin-right: 0;   
+}
