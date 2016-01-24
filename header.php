@@ -33,7 +33,7 @@
                 <nav class="site-nav">
                     <?php wp_nav_menu(array(
                              'container' => false,
-                             'menu' => __( 'The Main Menu', 'bonestheme' ),
+                             'menu' => __( 'The Main Menu', 'mrpress' ),
                     )); ?>
                 </nav>
                 

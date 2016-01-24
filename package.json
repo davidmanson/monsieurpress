@@ -1,11 +1,7 @@
 {
-  "name": "scss",
+  "name": "MonsieurPress",
   "version": "1.0.0",
-  "description": "David MANSON",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "description": "Development dependencies for MonsieurPress",
   "author": "David MANSON",
   "license": "ISC",
   "devDependencies": {

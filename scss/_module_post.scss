@@ -1,202 +1,184 @@
 /*********************
-POSTS & CONTENT STYLES
+POSTS HEADER STYLES
 *********************/
+.hentry {
+    line-height: 1.7em;
+    font-size: 18px;
 
-#content {
-	margin-top: 1.5em;
+    header {
+        .blog &{
+            padding: 0 1.5em;
+        }
+        .single &{
+            border-bottom: 1px solid $light-gray;
+            padding: 1.5em;
+        }
+
+    }
+
+    footer {
+        padding: 1.5em;
+        border-top: 1px solid $light-gray;
+
+        p {
+            margin: 0;
+        }
+    }
+
+    .blog &{
+        border-bottom: 1px solid #F7F7F7;   
+    }
+
+    h1, h2, h3{
+        color: #55595A;
+        font-weight: bold;
+    }
+    h2, h3{
+        color: #27799F   
+    }
+    h2{
+        margin-top: 1.5em;   
+    }
+
 }
 
-		.hentry {
-            line-height: 1.7em;
-            font-size: 18px;
 
-			header {
-                .blog &{
-                    padding: 0 1.5em;
-                }
-                .single &{
-                    border-bottom: 1px solid $light-gray;
-				    padding: 1.5em;
-                }
-                
-			}
-
-			footer {
-				padding: 1.5em;
-				border-top: 1px solid $light-gray;
-
-				p {
-					margin: 0;
-				}
-			}
-            
-            .blog &{
-                border-bottom: 1px solid #F7F7F7;   
-            }
-            
-            h1, h2, h3{
-                color: #55595A;
-                font-family: 'Merriweather', serif;  
-                font-weight: bold;
-            }
-            h2, h3{
-                color: #27799F   
-            }
-            h2{
-                margin-top: 1.5em;   
-            }
-
-		} /* end .hentry */
-
-		.single-title,
-		.page-title,
-		.entry-title {
-			margin: 0;
-		}
-
-        .single-title{
-            
-        }
-
-        .index-title{
-            font-size: 1.5em;
-        }
-
-		/* post meta */
+/*********************
+POSTS META STYLES
+*********************/
 		.byline {
 			color: $meta-gray;
 			font-style: italic;
 			margin: 0;
-
-			time {}
-		}
-
-		/* entry content */
-		.entry-content {
-			padding: 1.5em 1.5em 0;
-            
-            .blog &{
-                padding-top: .5em;   
-            }
-
-			p {
-				margin: 0 0 1.5em;
-			}
-
-			table {
-				width: 100%;
-				border: 1px solid $gray;
-				margin-bottom: 1.5em;
-
-				caption {
-					margin: 0 0 7px;
-					font-size: 0.75em;
-					color: $meta-gray;
-					text-transform: uppercase;
-					letter-spacing: 1px;
-				}
-			}
-
-			tr {
-				border-bottom: 1px solid $gray;
-
-				&:nth-child(even) {
-					background-color: $light-gray;
-				}
-			}
-
-			td {
-				padding: 7px;
-				border-right: 1px solid $gray;
-
-				&:last-child {
-					border-right: 0;
-				}
-			}
-
-			th {
-				background-color: $light-gray;
-				border-bottom: 1px solid $gray;
-				border-right: 1px solid $gray;
-
-				&:last-child {
-					border-right: 0;
-				}
-			}
-
-			blockquote {
-				margin: 0 0 1.5em 0.75em;
-				padding: 0 0 0 0.75em;
-				border-left: 3px solid $blue;
-				font-style: italic;
-				color: $meta-gray;
-
-				&:before {}
-
-			}
-
-			dd {
-				margin-left: 0;
-				font-size: 0.9em;
-				color: #787878;
-				margin-bottom: 1.5em;
-			}
-
-			img {
-				margin: 0 0 1.5em 0;
-				max-width: 100%;
-				height: auto;
-			}
-
-			.size-auto,
-			.size-full,
-			.size-large,
-			.size-medium,
-			.size-thumbnail {
-				max-width: 100%;
-				height: auto;
-			}
-
-			pre {
-				background: $black;
-				color: $light-gray;
-				font-size: 0.9em;
-				padding: 1.5em;
-				margin: 0 0 1.5em;
-				border-radius: 3px;
-			}
-            
-            ul{
-                list-style: disc;
-                padding-left: 2em;
-            }
-
-		} /* end .entry-content */
-
-		.wp-caption {
-			max-width: 100%;
-			background: #eee;
-			padding: 5px;
-
-			/* images inside wp-caption */
-			img {
-				max-width: 100%;
-				margin-bottom: 0;
-				width: 100%;
-			}
-
-			p.wp-caption-text {
-				font-size: 0.85em;
-				margin: 4px 0 7px;
-				text-align: center;
-			}
-
 		}
 
 
-	.tags {
-		margin: 0;
-	}
+
+/*********************
+POSTS CONTENT STYLES
+*********************/
+.entry-content {
+    padding: 1.5em 1.5em 0;
+
+    .blog &{
+        padding-top: .5em;   
+    }
+
+    p {
+        margin: 0 0 1.5em;
+    }
+
+    table {
+        width: 100%;
+        border: 1px solid $gray;
+        margin-bottom: 1.5em;
+
+        caption {
+            margin: 0 0 7px;
+            font-size: 0.75em;
+            color: $meta-gray;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+    }
+
+    tr {
+        border-bottom: 1px solid $gray;
+
+        &:nth-child(even) {
+            background-color: $light-gray;
+        }
+    }
+
+    td {
+        padding: 7px;
+        border-right: 1px solid $gray;
+
+        &:last-child {
+            border-right: 0;
+        }
+    }
+
+    th {
+        background-color: $light-gray;
+        border-bottom: 1px solid $gray;
+        border-right: 1px solid $gray;
+
+        &:last-child {
+            border-right: 0;
+        }
+    }
+
+    blockquote {
+        margin: 0 0 1.5em 0.75em;
+        padding: 0 0 0 0.75em;
+        border-left: 3px solid $blue;
+        font-style: italic;
+        color: $meta-gray;
+    }
+
+    dd {
+        margin-left: 0;
+        font-size: 0.9em;
+        color: #787878;
+        margin-bottom: 1.5em;
+    }
+
+    img {
+        margin: 0 0 1.5em 0;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .size-auto,
+    .size-full,
+    .size-large,
+    .size-medium,
+    .size-thumbnail {
+        max-width: 100%;
+        height: auto;
+    }
+
+    pre {
+        background: $black;
+        color: $light-gray;
+        font-size: 0.9em;
+        padding: 1.5em;
+        margin: 0 0 1.5em;
+        border-radius: 3px;
+    }
+
+    ul{
+        list-style: disc;
+        padding-left: 2em;
+    }
+
+}
+
+
+/*********************
+POSTS CAPTION STYLES
+*********************/
+.wp-caption {
+    max-width: 100%;
+    background: #eee;
+    padding: 5px;
+
+    /* images inside wp-caption */
+    img {
+        max-width: 100%;
+        margin-bottom: 0;
+        width: 100%;
+    }
+
+    p.wp-caption-text {
+        font-size: 0.85em;
+        margin: 4px 0 7px;
+        text-align: center;
+    }
+
+}
+
 
 
 
@@ -208,7 +190,6 @@ POSTS & CONTENT STYLES
 
     /* entry content */
     .entry-content {
-
 
         /* at this larger size, we can start to align images */
         .alignleft, img.alignleft {

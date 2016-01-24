@@ -19,9 +19,9 @@
 
                             <h3 class="h2 entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
                             <p class="byline entry-meta vcard">
-                                <?php printf( __( 'Posted', 'bonestheme' ).' %1$s %2$s',
+                                <?php printf( __( 'Posted', 'mrpress' ).' %1$s %2$s',
                                         '<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time>',
-                                        '<span class="by">'.__('by', 'bonestheme').'</span> <span class="entry-author author" itemprop="author" itemscope itemptype="http://schema.org/Person">' . get_the_author_link( get_the_author_meta( 'ID' ) ) . '</span>'
+                                        '<span class="by">'.__('by', 'mrpress').'</span> <span class="entry-author author" itemprop="author" itemscope itemptype="http://schema.org/Person">' . get_the_author_link( get_the_author_meta( 'ID' ) ) . '</span>'
                                 ); ?>
                             </p>
 
@@ -49,13 +49,13 @@
 
                             <article id="post-not-found" class="hentry cf">
                                 <header class="article-header">
-                                    <h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
+                                    <h1><?php _e( 'Oops, Post Not Found!', 'mrpress' ); ?></h1>
                                 </header>
                                 <section class="entry-content">
-                                    <p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'bonestheme' ); ?></p>
+                                    <p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'mrpress' ); ?></p>
                                 </section>
                                 <footer class="article-footer">
-                                        <p><?php _e( 'This is the error message in the archive.php template.', 'bonestheme' ); ?></p>
+                                        <p><?php _e( 'This is the error message in the archive.php template.', 'mrpress' ); ?></p>
                                 </footer>
                             </article>
 

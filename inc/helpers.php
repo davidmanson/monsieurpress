@@ -33,8 +33,8 @@ function theme_support() {
 
 	register_nav_menus(
 		array(
-			'main-nav' => __( 'The Main Menu', 'bonestheme' ),   // main nav in header
-			'footer-links' => __( 'Footer Links', 'bonestheme' ) // secondary nav in footer
+			'main-nav' => __( 'The Main Menu', 'mrpress' ),   // main nav in header
+			'footer-links' => __( 'Footer Links', 'mrpress' ) // secondary nav in footer
 		)
 	);
 
@@ -61,7 +61,7 @@ function remove_ptags_on_images($content){
 // Custom excerpt more
 function custom_excerpt_more($more) {
 	global $post;
-	return '...  <a class="excerpt-read-more" href="'. get_permalink( $post->ID ) . '" title="'. __( 'Read ', 'bonestheme' ) . esc_attr( get_the_title( $post->ID ) ).'">'. __( 'Read more &raquo;', 'bonestheme' ) .'</a>';
+	return '...  <a class="excerpt-read-more" href="'. get_permalink( $post->ID ) . '" title="'. __( 'Read ', 'mrpress' ) . esc_attr( get_the_title( $post->ID ) ).'">'. __( 'Read more &raquo;', 'mrpress' ) .'</a>';
 }
 
 function remove_recent_comments_style() {

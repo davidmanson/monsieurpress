@@ -58,33 +58,6 @@ a.btn-blue:visited {
 }
 
 
-.btn-cta,
-a.btn-cta{
-    @extend %btn;
-    width: 100%;
-    border: 2px solid $white;
-    color: $white;
-    font-size: 22px;
-    font-weight: bold;
-    &:visited {
-        color: $white;
-    }
-    &:hover {
-        color: $dark-blue;
-        background: $white;
-    }
-}
-
-
-
-.contact-btn-home{
-    @include animation(txt-intro-anim 1.5s 1 ease); 
-}
-
-
-
-
-
 
 
 

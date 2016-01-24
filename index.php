@@ -1,11 +1,10 @@
 <?php get_header(); ?>
 
-<div class="l-background l-pad-3">
+<div class="l-gradient l-pad-3">
     <div class="container">
         <div class="col-8 col-push-2">
             <div class="page-title">
-                <h2>Blog</h2>
-                <p>Wordpress, jQuery, css et autres gourmandises.</p>
+                <h2><?php wp_title(null); ?></h2>
             </div>
         </div>
     </div>
@@ -14,7 +13,7 @@
 
 <div class="container">
 
-    <main id="main" class="col-10 col-push-1" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+    <main id="main" class="col-10 col-push-1 l-pad-3" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -24,7 +23,7 @@
                 <h1 class="entry-title index-title" itemprop="headline" rel="bookmark"><?php the_title(); ?></h1>
 
                 <p class="byline entry-meta vcard">
-                    <?php printf( __( 'Posted', 'bonestheme' ). ' %1$s %2$s', '<time class="updated entry-time" datetime="' . get_the_time( 'Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option( 'date_format')) . '</time>', '<span class="by">'.__( 'by', 'bonestheme' ). '</span> <span class="entry-author author" itemprop="author" itemscope itemptype="http://schema.org/Person">' . get_the_author_link( get_the_author_meta( 'ID' ) ) . '</span>' ); ?>
+                    <?php printf( __( 'Posted', 'mrpress' ). ' %1$s %2$s', '<time class="updated entry-time" datetime="' . get_the_time( 'Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option( 'date_format')) . '</time>', '<span class="by">'.__( 'by', 'mrpress' ). '</span> <span class="entry-author author" itemprop="author" itemscope itemptype="http://schema.org/Person">' . get_the_author_link( get_the_author_meta( 'ID' ) ) . '</span>' ); ?>
                 </p>
             </header>
 
@@ -38,10 +37,10 @@
 
         <?php else : ?>
 
-        <article id="post-not-found" class="hentry cf">
+        <article>
             <section class="entry-content">
                 <p>
-                    <?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'bonestheme' ); ?>
+                    <?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'mrpress' ); ?>
                 </p>
             </section>
         </article>
@@ -54,6 +53,5 @@
 
 </div>
 
-<?php get_template_part( 'partials/cta', 'section' ); ?>
 
 <?php get_footer(); ?>

@@ -43,7 +43,7 @@ gulp.task('images', function() {
 
 /* Compress js */
 gulp.task('compress', function() {
-  return gulp.src('library/js/**/*.js')
+  return gulp.src('js/**/*.js')
     .pipe(uglify())
     .pipe(gulp.dest('./library/dist'));
 });

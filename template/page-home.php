@@ -7,7 +7,7 @@
 <?php get_header(); ?>
 
 <!-- introduction -->
-<section class="l-main-bg-color l-pad-11">
+<section class="l-gradient l-pad-11">
     <div class="container">
         <div class="col-12">
             <div class="intro-text">

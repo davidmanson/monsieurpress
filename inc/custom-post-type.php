@@ -18,8 +18,8 @@ function custom_post_project() {
     
 	register_post_type( 'project',
 		array( 'labels' => array(
-			     'name' => __( 'Projects', 'bonestheme' ),
-			     'singular_name' => __( 'Project', 'bonestheme' ),
+			     'name' => __( 'Projects', 'mrpress' ),
+			     'singular_name' => __( 'Project', 'mrpress' ),
 			),
 			'public' => true,
             'has_archive' => true,

@@ -56,8 +56,8 @@ add_image_size( 'thumb-realisation-medium', 700, round(700/$thumb_realisation_ra
 function theme_sidebars() {
 	register_sidebar(array(
 		'id' => 'sidebar1',
-		'name' => __( 'Sidebar 1', 'bonestheme' ),
-		'description' => __( 'The first (primary) sidebar.', 'bonestheme' ),
+		'name' => __( 'Sidebar 1', 'mrpress' ),
+		'description' => __( 'The first (primary) sidebar.', 'mrpress' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
