@@ -8,7 +8,7 @@
 
         <article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
-            <section class="entry-content cf" itemprop="articleBody">
+            <section class="entry-content" itemprop="articleBody">
                 <?php
                     the_content();
                 ?>

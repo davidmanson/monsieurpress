@@ -26,7 +26,7 @@
 <section class="l-light-gray l-pad-3">
     <div class="container">
         <p class="text-large text-center">
-            I've been made by a developper not 100% satisfied with underscore & bones starter theme, like them, I'm not meant for being used as a parent theme, just adopt me and hack me !
+            I've been made by a developper not 100% satisfied with existing starter theme, like them, I'm not meant for being used as a parent theme, just adopt me and hack me !
             I'm very minimal & easy to understand, I use modern workflow like gulp, compass, susy and love.
             The website you are in is actualy me, so if you feel good here, I think you should give me a try !
         </p>
@@ -37,13 +37,49 @@
 <!-- Regional scope -->
 <section class="l-white l-pad-3">
     <div class="container">
-        <div class="col-12">
-            <h2 class="section-title"><span>1</span>What makes me different ?</h2>
+        <div class="col-12 text-center">
+            <h2 class="section-title">What makes me different ?</h2>
         </div>
     </div>
     
     <div class="container">
-        TODO
+        <div class="col-4 text-center">
+            <h3>Made for developer</h3>
+            <p>
+                A developer made me, and hopefully, other developer will contribute to me, so I'm surely great for them, so for you.
+            </p>
+        </div>
+        <div class="col-4 text-center">
+            <h3>Responsive</h3>
+            <p>
+                I don't even know if I should talk about this, of course I'm responsive and I have a cool mobile menu, it goes without saying.
+            </p>
+        </div>
+        <div class="col-4 col-last text-center">
+            <h3>Super fast</h3>
+            <p>
+                Yeah I'm fast... just open your developer tools and check my weight, under 60kb with google fonts for this page... I love diet.
+            </p>
+        </div>
+        
+        <div class="col-4 text-center">
+            <h3>Easy to understand</h3>
+            <p>
+                You are developer and you didn't check my github yet ? Please go there ! just the right amount of comments to makes you feel good.
+            </p>
+        </div>
+        <div class="col-4 text-center">
+            <h3>No bullshit</h3>
+            <p>
+                If you check my inc/helpers.php file, you'll see how much I love removing what I don't need. You need it back ? just remove the removed things !
+            </p>
+        </div>
+        <div class="col-4 col-last text-center">
+            <h3>Custom post type & dashboard</h3>
+            <p>
+                Yes, yes, I'm not all naked, I have just the right amount of things to make you ready for your customers, an option page & CPT.
+            </p>
+        </div>
     </div>
 </section>
 

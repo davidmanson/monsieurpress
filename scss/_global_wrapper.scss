@@ -50,10 +50,16 @@
 	margin: 0;
     display: none;
     text-align: left;
+    width: 100%;
     
     .no-js &{
         display: block;   
     }
+    
+    .is-menu-on &{
+        display: block;
+    }
+    
     ul{
         margin: 0;
     }
@@ -81,7 +87,8 @@
     }
 
     .site-nav {
-        float: right;    
+        float: right;
+        width: auto;
         display: block !important;
         border: 0;
 

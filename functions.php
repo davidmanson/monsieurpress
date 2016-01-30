@@ -73,20 +73,36 @@ function theme_sidebars() {
 function assets_load() {
     if (is_admin()) return;
     
-    // Load jquery in the bottom
+    /*
+     * deregister jQuery in header & register it in footer
+     */
     wp_deregister_script( 'jquery' );
     wp_deregister_script( 'jquery-migrate');
     wp_register_script( 'jquery', includes_url( '/js/jquery/jquery.js' ), false, NULL, true );
     
-    // register scripts
-    wp_register_script( 'site-js', get_stylesheet_directory_uri() . '/js/scripts.js', array( 'jquery' ), '1.0', true );
     
-    // Register styles
+    /*
+     * deregister new wp-embed from WP 4.4
+     */
+    wp_deregister_script('wp-embed');
+    
+    
+    /*
+     * register theme scripts
+     */
+    wp_register_script( 'site-js', get_stylesheet_directory_uri() . '/js/scripts.js', array( /*'jquery' */), '1.0', true );
+    
+    
+    /*
+     * Register  theme style
+     */ 
     wp_register_style( 'site-stylesheet', get_stylesheet_directory_uri() . '/style.css', array(), '', 'all' );
     
-    // Enqueue styles & scripts
+    
+    /*
+     * Enqueue styles & scripts
+     */
     wp_enqueue_style( 'site-stylesheet' );
-    wp_enqueue_script( 'jquery');
     wp_enqueue_script( 'site-js' );
 }
 
