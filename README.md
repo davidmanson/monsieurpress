@@ -14,5 +14,5 @@ Go to your wordpress theme folder with your terminal, and type the following com
  
  You are now ready for happy coding !
  
- ## Note
- I'm very new and under development... Soon much better !
+## Note
+I'm very new and under development... Soon much better !
