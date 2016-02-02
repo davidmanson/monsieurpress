@@ -25,18 +25,4 @@ $title-height: 80px;
     font: 700 66px/#{$title-height} $secondary-font;
     color: #CACACA;
     margin: .5em 0 .7em 0;
-    
-    span{
-        display: inline-block;
-        width: $title-height;
-        height: $title-height;
-        border-radius: 50%;
-        background: $main-color;
-        margin-right: 20px;
-        
-        text-align: center;
-        color: $white;
-        font-size: 65px;
-        line-height: $title-height;
-    }
 }

@@ -5,7 +5,6 @@ Author:
 
 %btn {
     display: inline-block;
-    font-family: $sans-serif;
     text-decoration: none;
     color: $white;
     font-size: 16px;
@@ -14,104 +13,23 @@ Author:
     cursor: pointer;
     background: transparent;
     text-align: center;
-    
     transition: all 0.14s ease-in-out;
 
     &:hover, &:focus {
-        color: $dark-blue;
+        color: $main-color;
         text-decoration: none;
         outline: none;
         background: white;
     }
     &:active {
-        color: $dark-blue;
         top: 1px;
     }
 }
 
+
 .btn,
 a.btn,
 a.btn:visited {
-    @extend %btn; // here we load the btn defaults
-}
-
-.btn-blue,
-a.btn-blue,
-a.btn-blue:visited {
     @extend %btn;
-    border-color: $dark-blue;
-    color: $dark-blue;
-    &:hover, &:focus {
-        color: white;
-        background: $dark-blue;
-    }
 }
 
-.btn-full {
-    width: 100%;
-}
-
-.btn-more {
-    background: #F1F1F1;
-    border: none;
-    margin-top: 2em;
-}
-
-
-
-
-
-/*********************
-   Burger button
-*********************/
-
-//$btn-color: #5AB7BE;
-$btn-color: #5AB7BE;
-.menu-icon {
-    position: relative;
-    float: right;
-    width: 50px;
-    height: 50px;
-    transition: transform 0.5s;
-}
-.menu-icon span {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    display: block;
-    width: 22px;
-    height: 2px;
-    background-color: $btn-color;
-    transition: background 0.5s;
-}
-
-.menu-icon span::before,
-.menu-icon span::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translateY(-6px);
-    display: block;
-    width: 22px;
-    height: 2px;
-    background-color: $btn-color;
-    transition: transform 0.5s;
-}
-
-.menu-icon span::after {
-    transform: translateY(6px);
-}
-
-.menu-on .menu-icon span {
-    background: transparent;
-}
-
-.menu-on .menu-icon span::before {
-    transform: translateY(0) rotate(45deg);
-}
-
-.menu-on .menu-icon span::after {
-    transform: translateY(0) rotate(-45deg);
-}

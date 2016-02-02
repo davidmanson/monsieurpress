@@ -18,24 +18,30 @@ Stylesheet: Grid Stylesheet
     }
 }
 
+
 /************************
    Columns
 *************************/
-@for $i from 1 through 12 {
-  .col-#{$i} {
-        @media screen and (min-width: 767px) {
-            @include span($i);
-        }
-        @media screen and (max-width: 767px) {
-            @include span(12 of 12 last);
+@media screen and (min-width: 768px) {
+    
+    [class^='col-']{
+        float: left;
+        margin-right: gutter();
+    }
+    
+    @for $i from 1 through 12 {
+        .col-#{$i} {
+            width: span($i);
         }
     }
+    
 }
+
 
 /**********************************
    Vertical & horizontal pusher
 **********************************/
-@for $i from 1 through 12 {
+@for $i from 1 through 11 {
     .col-push-#{$i} {
         @include pre($i);   
     }
@@ -43,6 +49,7 @@ Stylesheet: Grid Stylesheet
         padding: #{$i}em 0;
     }
 }
+
 
 /************************
    Helpers

@@ -36,10 +36,10 @@ PAGE NAVI STYLES
         padding: 0.75em;
         min-width: 1em;
         display: block;
-        color: $blue;
+        color: $main-color;
         &:hover,
         &:focus {
-            background-color: $blue;
+            background-color: $main-color;
             color: $white;
         }
     }
@@ -53,7 +53,6 @@ PAGE NAVI STYLES
         }
     }
 }
-
 .wp-prev-next {
     ul {}
     .prev-link {

@@ -55,13 +55,9 @@ add_image_size( 'thumb-realisation-medium', 700, round(700/$thumb_realisation_ra
 *************************************/
 function theme_sidebars() {
 	register_sidebar(array(
-		'id' => 'sidebar1',
-		'name' => __( 'Sidebar 1', 'mrpress' ),
-		'description' => __( 'The first (primary) sidebar.', 'mrpress' ),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h4 class="widgettitle">',
-		'after_title' => '</h4>',
+		'id' => 'main-sidebar',
+		'name' => __( 'Main sidebar', 'mrpress' ),
+		'description' => __( 'The main sidebar', 'mrpress' ),
 	));
 } 
 
@@ -70,7 +66,7 @@ function theme_sidebars() {
 /************************************
  Assets
 *************************************/
-function assets_load() {
+function front_assets_load() {
     if (is_admin()) return;
     
     /*
@@ -90,7 +86,7 @@ function assets_load() {
     /*
      * register theme scripts
      */
-    wp_register_script( 'site-js', get_stylesheet_directory_uri() . '/js/scripts.js', array( /*'jquery' */), '1.0', true );
+    wp_register_script( 'site-js', get_stylesheet_directory_uri() . '/js/scripts.js', array(), '1.0', true );
     
     
     /*
@@ -107,7 +103,7 @@ function assets_load() {
 }
 
 
-add_action('wp_enqueue_scripts', 'assets_load');
+add_action('wp_enqueue_scripts', 'front_assets_load');
 
 
 

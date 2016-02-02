@@ -3,7 +3,6 @@
 *********************/
 .header {
 	background-color: $white;
-    background-color: #5AB7BE;
     padding: .5em;
     width: 100%;
     box-shadow: 0 1px 2px rgba(0,0,0,.3);
@@ -20,7 +19,7 @@
  Global wrapper
 *********************/
 .site-content{
-    padding-top: $header-height;
+    padding-top: 66px;
 }
 
 
@@ -45,12 +44,8 @@
 }
 
 .site-nav {
-    float: right;
-	border-bottom: 0;
-	margin: 0;
     display: none;
-    text-align: left;
-    width: 100%;
+    clear: left;
     
     .no-js &{
         display: block;   
@@ -64,7 +59,6 @@
         margin: 0;
     }
 	li {
-
 		a {
             font-size: 14px;
             font-weight: 600;
@@ -75,6 +69,7 @@
 		}
     }
 }
+
 
 @media only screen and (min-width: 768px) {
 
@@ -87,13 +82,11 @@
     }
 
     .site-nav {
+        clear: none;
         float: right;
-        width: auto;
         display: block !important;
-        border: 0;
 
         ul {
-            background:$black;
             margin-top:0;
         }
 
@@ -102,7 +95,6 @@
             position: relative;
 
             a {
-                border-bottom: 0;
                 line-height: $header-height;
                 padding: 0 .75em;
                 &:hover, &:focus {
@@ -113,13 +105,13 @@
         }
 
         /* highlight current page */
-        li.current-menu-item,
-        li.current_page_item,
-        li.current_page_ancestor {
-            a {
-                color: $main-color;
-            }
+        li.current-menu-item > a,
+        li.current_page_item > a,
+        li.current_page_ancestor > a,
+        .current-menu-ancestor > a{
+            color: $main-color;
         }
+        
     }
 }
 

@@ -24,28 +24,27 @@ IMPORTING LIBS
 @import "susy";
 
 
+
 /*********************
 IMPORTING MODULES
 *********************/
-
 // Config sass files
 @import "config_normalize";
-@import "config_variables";
-@import "config_typography";
 @import "config_general";
+@import "config_typography";
 @import "config_grid";
 
 
 // Global site element sass files
 @import "global_wrapper";
 @import "global_section";
-@import "global_blocs";
 @import "global_titles";
 @import "global_buttons";
 @import "global_pagination";
 
 
 // Modules sass files
+@import "module_burger_btn";
 @import "module_intro";
 @import "module_post";
 @import "module_forms";

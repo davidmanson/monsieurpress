@@ -1,13 +1,16 @@
 <?php
 /*
-The comments page for Bones
-*/
+ * The comments page for MonsieurPress
+ */
 
 // don't load it if you can't comment
 if ( post_password_required() ) { return; }
+
+// don't load if not opened
+if ( !comments_open() && !get_comments_number() ){ return; }
 ?>
 
-<?php if ( have_comments-() ) : ?>
+<?php if ( have_comments() ) : ?>
 
     <h3 id="comments-title" class="h2"><?php comments_number( __( '<span>No</span> Comments', 'mrpress' ), __( '<span>One</span> Comment', 'mrpress' ), __( '<span>%</span> Comments', 'mrpress' ) );?></h3>
 

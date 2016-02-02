@@ -1,5 +1,5 @@
 /*********************
- LAYOUT & GRID STYLES
+ SECTIONS STYLE
 *********************/
 .l-header{
     background-color: white;   
@@ -16,4 +16,22 @@
 
 .l-light-gray{
     background: #F7F7F8;
+}
+
+
+
+/*********************
+ SPECIFIC STYLES
+*********************/
+.marketing-theme{
+    text-align: center;
+    .col-4{
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+    h3{
+        text-transform: uppercase;
+        font-weight: bold;
+        color: #444;
+    }
 }

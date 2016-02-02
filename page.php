@@ -2,25 +2,19 @@
 
 <div class="container">
 
-    <main id="main" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
-
-        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
-        <article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
-
-            <section class="entry-content" itemprop="articleBody">
-                <?php
-                    the_content();
-                ?>
-            </section> 
-
-        </article>
-
-        <?php endwhile; endif; ?>
-
+    <main role="main" class="col-8">
+        <?php
+        while (have_posts()) : the_post();
+            get_template_part( 'template-parts/content', 'page' );	
+            comments_template();
+        endwhile;
+        ?>
     </main>
-
+    
+    <aside role="complementary" class="col-4 col-last l-pad-2" >
+        <?php get_sidebar(); ?>
+    </aside>
+    
 </div>
-
 
 <?php get_footer(); ?>

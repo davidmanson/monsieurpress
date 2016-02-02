@@ -6,8 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="profile" href="http://gmpg.org/xfn/11">
-
-    <title><?php bloginfo('name'); ?> | <?php is_front_page() ? bloginfo('description') : wp_title(''); ?></title>
+    <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
    
     <?php wp_head(); ?>
 
@@ -32,8 +31,8 @@
                 <!-- menu -->
                 <nav class="site-nav">
                     <?php wp_nav_menu(array(
-                             'container' => false,
-                             'menu' => __( 'The Main Menu', 'mrpress' ),
+                        'container' => false,
+                        'menu' => __( 'The Main Menu', 'mrpress' ),
                     )); ?>
                 </nav>
                 

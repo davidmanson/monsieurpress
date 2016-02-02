@@ -7,7 +7,8 @@ var autoprefixer = require('gulp-autoprefixer');
 var imagemin = require('gulp-imagemin');
 var pngquant = require('imagemin-pngquant');
 var uglify = require('gulp-uglify');
- 
+
+
 
 /* Sass */
 gulp.task('styles', function() {

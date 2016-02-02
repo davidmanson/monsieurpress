@@ -15,23 +15,9 @@ $color__border-input: #ccc;
 /*********************
 INPUTS
 *********************/
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"],
-input[type="number"],
-input[type="tel"],
-input[type="range"],
-input[type="date"],
-input[type="month"],
-input[type="week"],
-input[type="time"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="color"],
-textarea {
-	color: $color__text-input;
+
+%global_input_style{
+    color: $color__text-input;
 	border: 1px solid $color__border-input;
 	border-radius: 3px;
 
@@ -40,9 +26,6 @@ textarea {
 	}
 }
 
-select {
-	border: 1px solid $color__border-input;
-}
 
 input[type="text"],
 input[type="email"],
@@ -59,39 +42,17 @@ input[type="time"],
 input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"] {
+    @extend %global_input_style;
 	padding: 3px;
 }
 
-textarea {
-	padding-left: 3px;
-	width: 100%;
+select {
+    @extend %global_input_style;
+	border: 1px solid $color__border-input;
 }
 
-
-
-
-/*********************
-Buttons
-*********************/
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-	border: 1px solid;
-	border-color: $main-color;
-	border-radius: 3px;
-	background: transparent;
-	color: rgba(0, 0, 0, .8);
-	line-height: 1;
-	padding: .6em 1em .4em;
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
-
-	&:hover {
-		background: $main-color;
-	}
-
-	&:active,
-	&:focus {
-		border-color: $main-color;
-	}
+textarea {
+    @extend %global_input_style;
+	padding-left: 3px;
+	width: 100%;
 }

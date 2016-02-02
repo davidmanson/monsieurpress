@@ -46,12 +46,11 @@ POSTS HEADER STYLES
 /*********************
 POSTS META STYLES
 *********************/
-		.byline {
-			color: $meta-gray;
-			font-style: italic;
-			margin: 0;
-		}
-
+.byline {
+	color: $gray;
+	font-style: italic;
+	margin: 0;
+}
 
 
 /*********************
@@ -68,53 +67,12 @@ POSTS CONTENT STYLES
         margin: 0 0 1.5em;
     }
 
-    table {
-        width: 100%;
-        border: 1px solid $gray;
-        margin-bottom: 1.5em;
-
-        caption {
-            margin: 0 0 7px;
-            font-size: 0.75em;
-            color: $meta-gray;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-    }
-
-    tr {
-        border-bottom: 1px solid $gray;
-
-        &:nth-child(even) {
-            background-color: $light-gray;
-        }
-    }
-
-    td {
-        padding: 7px;
-        border-right: 1px solid $gray;
-
-        &:last-child {
-            border-right: 0;
-        }
-    }
-
-    th {
-        background-color: $light-gray;
-        border-bottom: 1px solid $gray;
-        border-right: 1px solid $gray;
-
-        &:last-child {
-            border-right: 0;
-        }
-    }
-
     blockquote {
         margin: 0 0 1.5em 0.75em;
         padding: 0 0 0 0.75em;
-        border-left: 3px solid $blue;
+        border-left: 3px solid $main-color;
         font-style: italic;
-        color: $meta-gray;
+        color: $gray;
     }
 
     dd {
@@ -180,6 +138,51 @@ POSTS CAPTION STYLES
 }
 
 
+/*********************
+ Table style
+*********************/
+.entry-content{
+    table {
+        width: 100%;
+        border: 1px solid $gray;
+        margin-bottom: 1.5em;
+
+        caption {
+            margin: 0 0 7px;
+            font-size: 0.75em;
+            color: $gray;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+    }
+
+    tr {
+        border-bottom: 1px solid $gray;
+
+        &:nth-child(even) {
+            background-color: $light-gray;
+        }
+    }
+
+    td {
+        padding: 7px;
+        border-right: 1px solid $gray;
+
+        &:last-child {
+            border-right: 0;
+        }
+    }
+
+    th {
+        background-color: $light-gray;
+        border-bottom: 1px solid $gray;
+        border-right: 1px solid $gray;
+
+        &:last-child {
+            border-right: 0;
+        }
+    }
+}
 
 
 @media only screen and (min-width: 481px) {
