@@ -1,6 +1,6 @@
-/*********************
- HEADER WRAPPER
-*********************/
+/*----------------------
+   Header wrapper
+-----------------------*/
 .header {
 	background-color: $white;
     padding: .5em;
@@ -15,17 +15,18 @@
 
 
 
-/*********************
- Global wrapper
-*********************/
+/*----------------------
+   Global wrapper
+-----------------------*/
 .site-content{
     padding-top: 66px;
 }
 
 
-/*********************
- LOGO
-*********************/
+
+/*----------------------
+   Logo
+-----------------------*/
 .site-logo img{
     float: left;
     display: block;
@@ -36,9 +37,10 @@
 }
 
 
-/*********************
- NAVIGATION STYLES
-*********************/
+
+/*----------------------
+   Navigation
+-----------------------*/
 .menu-icon{
     display: block;
 }
@@ -56,6 +58,7 @@
     }
     
     ul{
+        list-style: none;
         margin: 0;
     }
 	li {
@@ -71,11 +74,11 @@
 }
 
 
-@media only screen and (min-width: 768px) {
 
-    /*********************
-    NAVIGATION STYLES
-    *********************/
+/*----------------------
+   Navigation desktop
+-----------------------*/
+@media only screen and (min-width: 768px) {
 
     .menu-icon{
         display: none;   
@@ -113,14 +116,4 @@
         }
         
     }
-}
-
-/*********************
-FOOTER STYLES
-*********************/
-
-.footer {
-	text-align: center;
-	background-color: #404040;
-	color: $light-gray;
 }

@@ -1,0 +1,18 @@
+//*******************************************************
+// UTILS FILE
+// Here we put the placeholders, mixins & functions
+//*******************************************************
+
+//-----------------------
+// Placeholders
+//-----------------------
+%clearfix{
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}

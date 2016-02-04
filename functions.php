@@ -19,7 +19,6 @@ function theme_init() {
   add_action( 'init', 'head_cleanup' );
   add_action( 'init', 'theme_support' );
   add_action( 'widgets_init', 'theme_sidebars' );
-  add_action( 'widgets_init', 'remove_recent_comments_style');
 
   add_filter( 'the_content', 'remove_ptags_on_images' );
   add_filter( 'excerpt_more', 'custom_excerpt_more' );
@@ -28,6 +27,32 @@ function theme_init() {
 
 add_action( 'after_setup_theme', 'theme_init' );
 
+
+
+/*********************
+THEME SUPPORT
+*********************/
+function theme_support() {
+	add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'automatic-feed-links');
+	add_theme_support( 'menus' );
+    add_theme_support( 'title-tag' );
+
+	register_nav_menus(
+		array(
+			'main-nav' => __( 'The Main Menu', 'mrpress' ),   // main nav in header
+			'footer-links' => __( 'Footer Links', 'mrpress' ) // secondary nav in footer
+		)
+	);
+
+	// Enable support for HTML5 markup.
+	add_theme_support( 'html5', array(
+		'comment-list',
+		'search-form',
+		'comment-form'
+	) );
+
+}
 
 
 
@@ -43,10 +68,10 @@ if ( ! isset( $content_width ) ) {
 /************************************
  Thumbnail size
 *************************************/
-$thumb_realisation_ratio = 1.5;
+$thumb_realisation_ratio = 1.5; // Using aspect ratio for WP 4.4 responsive image
 
-add_image_size( 'thumb-realisation-small', 350, round(350/$thumb_realisation_ratio), true );
-add_image_size( 'thumb-realisation-medium', 700, round(700/$thumb_realisation_ratio), true );
+add_image_size( 'mrpress-small', 350, round(350/$thumb_realisation_ratio), true );
+add_image_size( 'mrpress-medium', 700, round(700/$thumb_realisation_ratio), true );
 
 
 
@@ -58,6 +83,8 @@ function theme_sidebars() {
 		'id' => 'main-sidebar',
 		'name' => __( 'Main sidebar', 'mrpress' ),
 		'description' => __( 'The main sidebar', 'mrpress' ),
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
 	));
 } 
 

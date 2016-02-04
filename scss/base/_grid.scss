@@ -1,0 +1,71 @@
+//*******************************************************
+// GRID FILE
+// A simple homemade Grid system
+//*******************************************************
+
+*{
+    box-sizing: border-box;
+}
+
+
+/*-----------------------
+    Container
+------------------------*/
+.l-container {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 1em;
+    @extend %clearfix;
+    @media (max-width: 767px){
+        max-width: 680px;
+    }
+}
+ 
+
+/*-----------------------
+    Lines
+------------------------*/
+.l-row {
+    @extend %clearfix;
+}
+
+
+/*-----------------------
+    Columns
+------------------------*/
+[class*='l-col-'] {
+    float: left;
+    padding: 0 1.5em;
+    width: 100%;
+    min-height: 1px; 
+}   
+ 
+@media screen and (min-width: 768px) {
+    @for $i from 1 through 12 {      
+        .l-col-#{$i} {         
+            width: 100% / 12 * $i;   
+        }
+    }
+}
+
+
+/*-------------------------------
+    Pushers
+--------------------------------*/
+@media screen and (min-width: 768px) {
+    @for $i from 1 through 11 {
+        .l-col-push-#{$i} {
+            margin-left: 100% / 12 * $i;
+        }
+    }
+}
+
+
+/*-------------------------------
+    Padding up & down
+--------------------------------*/
+@for $i from 1 through 11 {
+    .l-pad-#{$i}{   
+        padding: #{$i}em 0;
+    }
+}

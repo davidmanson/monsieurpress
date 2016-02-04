@@ -5,46 +5,40 @@ Author: David MANSON
 Author URI: http://www.david-manson.com/
 Description: Hello, I'm MonsieurPress, a super cool, lightweight & simple WordPress starter theme for developpers
 Version: 1.0.0
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License: WTFPL
+License URI: http://www.wtfpl.net/
 Text Domain: _mrpress
-Tags:
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
-MonsieurPress is a heavily modified version of bones, (C) 2012-2015 David MANSON.
-David MANSON is distributed under the terms of the GNU GPL v2 or later.
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+Tags: starter theme sidebar responsive
 */
 
-/*********************
-IMPORTING LIBS
-*********************/
-@import 'compass';
-@import "susy";
+
+//---------------------
+// IMPORTING BASE
+//---------------------
+@import "base/_config";
+@import "base/_utils";
+@import "base/_normalize";
+@import "base/_helpers";
+@import "base/_typography";
+@import "base/_grid";
 
 
-
-/*********************
-IMPORTING MODULES
-*********************/
-// Config sass files
-@import "config_normalize";
-@import "config_general";
-@import "config_typography";
-@import "config_grid";
+//---------------------
+// IMPORTING LAYOUT
+//---------------------
+@import "layout/_header";
+@import "layout/_footer";
+@import "layout/_sections";
 
 
-// Global site element sass files
-@import "global_wrapper";
-@import "global_section";
-@import "global_titles";
-@import "global_buttons";
-@import "global_pagination";
-
-
-// Modules sass files
-@import "module_burger_btn";
-@import "module_intro";
-@import "module_post";
-@import "module_forms";
+//-----------------------
+// IMPORTING COMPONENTS
+//-----------------------
+@import "components/_titles";
+@import "components/_burger_btn";
+@import "components/_widgets";
+@import "components/_buttons";
+@import "components/_intro";
+@import "components/_pagination";
+@import "components/_post";
+@import "components/_forms";

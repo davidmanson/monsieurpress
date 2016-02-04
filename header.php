@@ -15,8 +15,8 @@
 <body <?php body_class(); ?>>
 
     <div id="site-container" class="site-container">
-        <header class="l-header header">
-            <div id="inner-header" class="container">
+        <header id="site-header" class="l-header header">
+            <div class="l-container">
             
                 <!-- logo -->
                 <a class="site-logo" href="<?php echo home_url(); ?>" rel="nofollow">

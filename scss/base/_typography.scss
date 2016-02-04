@@ -1,0 +1,43 @@
+//*******************************************************
+// TYPOGRAPHY FILE
+// Here is the global typography styles
+//*******************************************************
+
+
+/*-----------------------
+    General styles
+------------------------*/
+body {
+	font-family: $primary-font;
+	font-size: 100%;
+	line-height: 1.5;
+	color: $text-color;
+	background-color: #FBFBFB;
+  	-webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale;
+}
+
+
+/*-----------------------
+    Link Styles
+------------------------*/
+a {
+	color: $main-color;
+
+	&:visited {
+		color: $main-color;
+	}
+	&:hover,
+	&:focus,
+	&:active {
+		text-decoration: underline;
+	}
+	&:focus {
+		outline: thin dotted;
+	}
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+}
+

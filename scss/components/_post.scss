@@ -1,51 +1,6 @@
-/*********************
-POSTS HEADER STYLES
-*********************/
-.hentry {
-    line-height: 1.7em;
-    font-size: 18px;
-
-    header {
-        .blog &{
-            padding: 0 1.5em;
-        }
-        .single &{
-            border-bottom: 1px solid $light-gray;
-            padding: 1.5em;
-        }
-
-    }
-
-    footer {
-        padding: 1.5em;
-        border-top: 1px solid $light-gray;
-
-        p {
-            margin: 0;
-        }
-    }
-
-    .blog &{
-        border-bottom: 1px solid #F7F7F7;   
-    }
-
-    h1, h2, h3{
-        color: #55595A;
-        font-weight: bold;
-    }
-    h2, h3{
-        color: #27799F   
-    }
-    h2{
-        margin-top: 1.5em;   
-    }
-
-}
-
-
-/*********************
-POSTS META STYLES
-*********************/
+/*----------------------
+   Post Meta
+-----------------------*/
 .byline {
 	color: $gray;
 	font-style: italic;
@@ -53,15 +8,11 @@ POSTS META STYLES
 }
 
 
-/*********************
-POSTS CONTENT STYLES
-*********************/
+/*----------------------
+   Post content
+-----------------------*/
 .entry-content {
-    padding: 1.5em 1.5em 0;
-
-    .blog &{
-        padding-top: .5em;   
-    }
+    padding: 1.5em 0;
 
     p {
         margin: 0 0 1.5em;
@@ -114,9 +65,9 @@ POSTS CONTENT STYLES
 }
 
 
-/*********************
-POSTS CAPTION STYLES
-*********************/
+/*----------------------
+   Post Caption style
+-----------------------*/
 .wp-caption {
     max-width: 100%;
     background: #eee;
@@ -138,9 +89,9 @@ POSTS CAPTION STYLES
 }
 
 
-/*********************
- Table style
-*********************/
+/*----------------------
+   Table Style
+-----------------------*/
 .entry-content{
     table {
         width: 100%;
@@ -185,16 +136,10 @@ POSTS CAPTION STYLES
 }
 
 
+/* at this larger size, we can start to align images */
 @media only screen and (min-width: 481px) {
 
-    /*********************
-    POSTS & CONTENT STYLES
-    *********************/
-
-    /* entry content */
     .entry-content {
-
-        /* at this larger size, we can start to align images */
         .alignleft, img.alignleft {
             margin-right: 1.5em;
             display: inline;

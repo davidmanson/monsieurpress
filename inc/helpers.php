@@ -22,37 +22,9 @@ function head_cleanup() {
 
 
 
-
-/*********************
-THEME SUPPORT
-*********************/
-function theme_support() {
-	add_theme_support( 'post-thumbnails' );
-	add_theme_support( 'automatic-feed-links');
-	add_theme_support( 'menus' );
-    add_theme_support( 'title-tag' );
-
-	register_nav_menus(
-		array(
-			'main-nav' => __( 'The Main Menu', 'mrpress' ),   // main nav in header
-			'footer-links' => __( 'Footer Links', 'mrpress' ) // secondary nav in footer
-		)
-	);
-
-	// Enable support for HTML5 markup.
-	add_theme_support( 'html5', array(
-		'comment-list',
-		'search-form',
-		'comment-form'
-	) );
-
-}
-
-
 /*********************
 RANDOM CLEANUP ITEMS
 *********************/
-
 // remove the p from around imgs
 // http://css-tricks.com/snippets/wordpress/remove-paragraph-tags-from-around-images/
 function remove_ptags_on_images($content){
@@ -64,12 +36,6 @@ function custom_excerpt_more($more) {
 	global $post;
 	return '...  <a class="excerpt-read-more" href="'. get_permalink( $post->ID ) . '" title="'. __( 'Read ', 'mrpress' ) . esc_attr( get_the_title( $post->ID ) ).'">'. __( 'Read more &raquo;', 'mrpress' ) .'</a>';
 }
-
-function remove_recent_comments_style() {
-	global $wp_widget_factory;
-	remove_action('wp_head', array($wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style'));
-}
-
 
 
 

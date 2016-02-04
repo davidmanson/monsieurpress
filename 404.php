@@ -1,13 +1,13 @@
 <?php get_header(); ?>
         
 <div class="l-background l-pad-4">
-    <div class="container">
-        <div class="col-8 col-push-2">
+    <div class="l-container">
+        <div class="l-col-8 l-col-push-2">
             <p class="intro-text">
-                Oups, cette page n'existe pas...
+                Oups, this page doesn't exist...
             </p>
             <div class="text-center">
-                <a class="btn" href="<?php echo home_url(); ?>">Accueil</a>
+                <a class="btn" href="<?php echo home_url(); ?>">Home</a>
             </div>
         </div>
     </div>

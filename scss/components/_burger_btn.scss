@@ -1,9 +1,8 @@
-/*********************
+/*----------------------
    Burger button
-*********************/
+-----------------------*/
+$btn-color: $main-color;
 
-//$btn-color: #5AB7BE;
-$btn-color: #5AB7BE;
 .menu-icon {
     position: relative;
     float: right;
@@ -11,7 +10,7 @@ $btn-color: #5AB7BE;
     height: 50px;
     transition: transform 0.5s;
 }
-.menu-icon span {
+.menu-icon > span {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -23,8 +22,8 @@ $btn-color: #5AB7BE;
     transition: background 0.5s;
 }
 
-.menu-icon span::before,
-.menu-icon span::after {
+.menu-icon > span::before,
+.menu-icon > span::after {
     content: '';
     position: absolute;
     top: 0;
@@ -37,18 +36,18 @@ $btn-color: #5AB7BE;
     transition: transform 0.5s;
 }
 
-.menu-icon span::after {
+.menu-icon > span::after {
     transform: translateY(6px);
 }
 
-.menu-on .menu-icon span {
+.menu-on .menu-icon > span {
     background: transparent;
 }
 
-.menu-on .menu-icon span::before {
+.menu-on .menu-icon > span::before {
     transform: translateY(0) rotate(45deg);
 }
 
-.menu-on .menu-icon span::after {
+.menu-on .menu-icon > span::after {
     transform: translateY(0) rotate(-45deg);
 }

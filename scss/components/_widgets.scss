@@ -1,0 +1,14 @@
+/*----------------------
+   Widgets style
+-----------------------*/
+.widget{
+    background: $light-gray;
+    border: 1px solid $gray;
+    margin-bottom: 1em;
+    padding: 1em;
+}
+
+.widgettitle{
+    text-align: center;
+    margin-top: 0;
+}

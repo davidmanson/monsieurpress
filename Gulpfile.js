@@ -1,37 +1,51 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
-var compass = require('gulp-compass');
-var minifyCSS = require('gulp-minify-css');
+var cssnano = require('gulp-cssnano');
 var rename = require('gulp-rename');
 var autoprefixer = require('gulp-autoprefixer');
 var imagemin = require('gulp-imagemin');
 var pngquant = require('imagemin-pngquant');
 var uglify = require('gulp-uglify');
+var livereload = require('gulp-livereload');
+var duration = require('gulp-duration')
+var plumber = require('gulp-plumber');
 
 
 
-/* Sass */
+/*-------------------------------------------
+ * Sass compilation
+ * - compile Scss file to CSS
+ * - Auto prefix CSS
+ * - Reload browser (if live reload installed)
+ -------------------------------------------*/
 gulp.task('styles', function() {
     gulp.src('scss/**/*.scss')
-        .pipe(compass({
-          css: '.',
-          sass: 'scss',
-          image: 'images'
-        }))
-        .pipe(sass().on('error', sass.logError))
+        .pipe(plumber())
+        .pipe(sass())
+        .pipe(autoprefixer())
         .pipe(gulp.dest('./'))
+        .pipe(duration('Compiling scss'))
+        .pipe(livereload());
 });
 
 
-/* Minify */
+
+/*-------------------------------------------
+ * Minify CSS
+ * - Launch the task before production
+ -------------------------------------------*/
 gulp.task('minify', function () {
     gulp.src('style.css')
-        .pipe(autoprefixer())
-        .pipe(minifyCSS())
+        .pipe(cssnano())
         .pipe(gulp.dest('.'));
 });
 
-/* Image optim */
+
+
+/*-------------------------------------------
+ * Image optimisation
+ * - Launch the task before production
+ -------------------------------------------*/
 gulp.task('images', function() {
     gulp.src('images/*')
         .pipe(imagemin({
@@ -42,15 +56,29 @@ gulp.task('images', function() {
         .pipe(gulp.dest('./images'));
 });
 
-/* Compress js */
-gulp.task('compress', function() {
-  return gulp.src('js/**/*.js')
-    .pipe(uglify())
-    .pipe(gulp.dest('./library/dist'));
-});
 
 
-/* Watch */
+/*-------------------------------------------
+ * Minify Javascript
+ * - Launch the task before production
+ * ======== TODO ========
+ -------------------------------------------*/
+
+//gulp.task('compress', function() {
+//  return gulp.src('js/**/*.js')
+//    .pipe(uglify())
+//    .pipe(gulp.dest('./library/dist'));
+//});
+
+
+
+
+/*-------------------------------------------
+ * Default Watcher
+ * - Launch the task before developing
+ -------------------------------------------*/
 gulp.task('default',function() {
+    livereload.listen();
     gulp.watch('scss/**/*.scss',['styles']);
 });
+

@@ -6,8 +6,8 @@
 
 <?php get_header(); ?>
 
-<div class="container">
-    <main class="col-10 col-push-1" role="main">
+<div class="l-container">
+    <main class="l-col-10 l-col-push-1" role="main">
         <?php
         while (have_posts()) : the_post();
             get_template_part( 'template-parts/content', 'page' );	

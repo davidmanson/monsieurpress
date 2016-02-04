@@ -1,6 +1,6 @@
-/*********************
-  Page title
-*********************/
+/*----------------------
+   Pages titles
+-----------------------*/
 .page-title{
     color: #FFFFFF;
     text-align: center;
@@ -10,19 +10,18 @@
         font-size: 30px;
         font-weight: bold;
         text-transform: uppercase;
-        margin-bottom: 0;
+        margin: 0;
     }
 }
 
 
 
-/*********************
-  Section title
-*********************/
-$title-height: 80px;
-
+/*----------------------
+   Section title
+-----------------------*/
 .section-title{
-    font: 700 66px/#{$title-height} $secondary-font;
+    text-align: center;
+    font: 700 48px/1.5em $secondary-font;
     color: #CACACA;
     margin: .5em 0 .7em 0;
 }
