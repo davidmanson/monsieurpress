@@ -2,7 +2,7 @@
 
 <div class="l-container">
 
-    <main id="main" class="l-col-10 l-col-push-1" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+    <main id="main" class="l-col-10 l-col-push-1" role="main">
 
         <?php
         while (have_posts()) : the_post();

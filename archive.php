@@ -1,21 +1,20 @@
 <?php get_header(); ?>
 
-    <div id="l-content">
+<div class="l-container">
 
-        <div id="inner-content" class="wrap cf">
-
-                <main id="main" class="m-all t-2of3 d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
-
-                <?php
-                    get_template_part( 'template-parts/content', 'page' );	
-                ?>
-
-                </main>
-
-            <?php get_sidebar(); ?>
-
-        </div>
-
-    </div>
+    <main role="main" class="l-col-8">
+        <?php
+        while (have_posts()) : the_post();
+            get_template_part( 'template-parts/content', 'page' );	
+            comments_template();
+        endwhile;
+        ?>
+    </main>
+    
+    <aside role="complementary" class="l-col-4 l-pad-2" >
+        <?php get_sidebar(); ?>
+    </aside>
+    
+</div>
 
 <?php get_footer(); ?>
