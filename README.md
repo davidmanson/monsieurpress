@@ -25,7 +25,7 @@ I have some embeded gulp tasks that can be use for you workflow :
 - `gulp styles` : Just compile the scss (no watching)
 - `gulp minify` : Minify the style.css file, do this before production
 - `gulp images` : Compress images located in the images folder
- 
- 
+- `gulp compress` : Minify the javascript
+
 ## Note
 I'm very new and under development... Much better soon !

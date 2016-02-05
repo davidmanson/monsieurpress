@@ -61,15 +61,16 @@ gulp.task('images', function() {
 /*-------------------------------------------
  * Minify Javascript
  * - Launch the task before production
- * ======== TODO ========
  -------------------------------------------*/
 
-//gulp.task('compress', function() {
-//  return gulp.src('js/**/*.js')
-//    .pipe(uglify())
-//    .pipe(gulp.dest('./library/dist'));
-//});
-
+gulp.task('compress', function() {
+    gulp.src('js/**/*.js')
+        .pipe(uglify())
+        .pipe(rename({
+            suffix: '.min'
+        }))
+        .pipe(gulp.dest('js/'));
+});
 
 
 
