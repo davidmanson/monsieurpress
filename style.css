@@ -621,19 +621,20 @@ a.btn:visited {
 /*----------------------
    Pagination style
 -----------------------*/
-.pagination .page-numbers {
-  float: left;
-  padding: .4em;
-  min-width: 9%;
-  border-radius: 3px;
-  text-align: center;
-  margin-right: .5em;
-  text-decoration: none; }
-
-.pagination .page-numbers.current,
-.pagination .page-numbers:hover {
-  background: #FF5800;
-  color: #FFFFFF; }
+.pagination {
+  margin-bottom: 2em; }
+  .pagination .page-numbers {
+    float: left;
+    padding: .4em;
+    min-width: 9%;
+    border-radius: 3px;
+    text-align: center;
+    margin-right: .5em;
+    text-decoration: none; }
+  .pagination .page-numbers.current,
+  .pagination .page-numbers:hover {
+    background: #FF5800;
+    color: #FFFFFF; }
 
 /*----------------------
    Post Meta

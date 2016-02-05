@@ -3,6 +3,7 @@
 -----------------------*/
 .pagination {
     @extend %clearfix;
+    margin-bottom: 2em;
     
     .page-numbers{
         float: left;
