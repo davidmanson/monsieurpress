@@ -11,7 +11,7 @@
     <div class="l-container">
         <div class="l-col-12">
             <div class="intro-text">
-                <h1>Hello, I'm MonsieurPress, a super cool, lightweight & simple WordPress starter theme for developpers</h1>
+                <h1>Hello, I'm MonsieurPress, a super cool, lightweight & simple WordPress starter theme for developers</h1>
             </div>
             <div class="text-center">
                 <a href="https://github.com/dadipaq/monsieurpress/archive/master.zip" class="btn contact-btn-home">Download</a>
@@ -27,9 +27,8 @@
     <div class="l-container">
         <div class="l-col-12">
             <p class="text-large text-center">
-                I've been made by a developper not 100% satisfied with existing starter theme, I'm a little less barebones and I have a minimal design, like them, I'm not meant for being used as a parent theme, just adopt me and hack me !
-                I'm very minimal & easy to understand, I use modern workflow like gulp, sass, and love.
-                The website you are in is actualy me, so if you feel good here, I think you should give me a try !
+                Hello developer ! I'm a WordPress starter theme, I'm not all naked and actualy the webpage you are in is me ! I'm very minimal & easy to understand, I use modern workflow like gulp, sass, and love. I'm not meant for being used as a parent theme, just adopt me and hack me !
+                feel good here ? Give me a try !
             </p>
         </div>
     </div>
@@ -70,7 +69,7 @@
             <div class="l-col-4">
                 <h3>Easy to understand</h3>
                 <p>
-                    You are developer and you didn't check my github yet ? Please go there ! just the right amount of comments to makes you feel good.
+                    You are developer and you didn't check my github yet ? Please go there ! just the right amount of comments to make you feel good.
                 </p>
             </div>
             <div class="l-col-4">
@@ -82,7 +81,7 @@
             <div class="l-col-4 l-col-last">
                 <h3>Gulp ready</h3>
                 <p>
-                    I have some cool function to makes your workflow super nice & fast. Sass compiling, autoreload and minification for css & js .
+                    I have some cool functions to make your workflow super nice & fast. Sass compiling, autoreload and minification for css & js .
                 </p>
             </div>
         </div>
