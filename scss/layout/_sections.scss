@@ -2,20 +2,19 @@
    Section style
 -----------------------*/
 .l-header{
-    background-color: white;   
+    background-color: $white;   
 }
 
 .l-white{
-    background: #ffffff;
+    background: $white;
 }
 
-.l-gradient{
-    background: #50C9C3; /* fallback for old browsers */
-    background: linear-gradient(to left, #50C9C3 , #96DEDA);
+.l-dark{
+    background: $dark-gray;
 }
 
 .l-light-gray{
-    background: #F7F7F8;
+    background: $light-gray;
 }
 
 

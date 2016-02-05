@@ -59,9 +59,8 @@
 	li {
 		a {
             font-size: 14px;
-            font-weight: 600;
 			display: block;
-			color: #575757;
+			color: $dark-gray;
 			text-decoration: none;
 			padding: 0.75em;
             white-space: nowrap;
@@ -115,30 +114,31 @@
             position: absolute;
             right: 0;
             padding: 0;
-            background: $dark-gray;
+            background: $light-gray;
             a{
-                color: $light-gray;
+                color: $dark-gray;
             }
         }
         
     }
+    
+    /*----------------------
+       Sub menu system
+    -----------------------*/
+    .menu-item-has-children{
+
+        .sub-menu{
+            opacity: 0;
+            visibility: hidden;
+            transition: all .2s ease-in-out;
+        }
+
+        &:hover .sub-menu{
+            opacity: 1;
+            visibility: visible;
+        }
+
+    }
 }
 
 
-/*----------------------
-   Sub menu system
------------------------*/
-.menu-item-has-children{
-    
-    .sub-menu{
-        opacity: 0;
-        visibility: hidden;
-        transition: all .2s ease-in-out;
-    }
-    
-    &:hover .sub-menu{
-        opacity: 1;
-        visibility: visible;
-    }
-    
-}

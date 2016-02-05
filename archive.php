@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="l-gradient l-pad-3">
+<div class="l-dark l-pad-3">
     <div class="l-container">
         <div class="l-col-8 l-col-push-2">
             <div class="page-title">

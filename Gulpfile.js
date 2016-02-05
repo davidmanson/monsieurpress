@@ -62,7 +62,6 @@ gulp.task('images', function() {
  * Minify Javascript
  * - Launch the task before production
  -------------------------------------------*/
-
 gulp.task('compress', function() {
     gulp.src('js/**/*.js')
         .pipe(uglify())

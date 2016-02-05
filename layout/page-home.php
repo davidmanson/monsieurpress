@@ -7,7 +7,7 @@
 <?php get_header(); ?>
 
 <!-- introduction -->
-<section class="l-gradient l-pad-11">
+<section class="l-dark l-pad-11">
     <div class="l-container">
         <div class="l-col-12">
             <div class="intro-text">
@@ -61,7 +61,7 @@
             <div class="l-col-4">
                 <h3>Super fast</h3>
                 <p>
-                    Yeah I'm fast... just open your developer tools and check my weight, under 60kb with google fonts for this page... I love diet.
+                    Yeah I'm fast ! Open your developer tools and check my weight, under 30kb for this page, yes it's WordPress ! I love diet.
                 </p>
             </div>
         </div>
