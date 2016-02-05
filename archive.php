@@ -1,5 +1,15 @@
 <?php get_header(); ?>
 
+<div class="l-gradient l-pad-3">
+    <div class="l-container">
+        <div class="l-col-8 l-col-push-2">
+            <div class="page-title">
+                <h2><?php wp_title(null); ?></h2>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="l-container">
 
     <main role="main" class="l-col-8">
