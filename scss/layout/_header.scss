@@ -3,9 +3,8 @@
 -----------------------*/
 .header {
 	background-color: $white;
-    padding: .5em;
     width: 100%;
-    box-shadow: 0 1px 2px rgba(0,0,0,.3);
+    box-shadow: 0 1px 2px rgba(0,0,0,.2);
     position: fixed;
     z-index: 999;
     .single-post &{
@@ -19,7 +18,7 @@
    Global wrapper
 -----------------------*/
 .site-content{
-    padding-top: 66px;
+    padding-top: 61px;
 }
 
 
@@ -33,13 +32,13 @@
     height: 24px;
     width: auto;
     box-sizing: content-box;
-    padding: ($header-height - 24)/2 0;
+    padding: 18px 0;
 }
 
 
 
 /*----------------------
-   Navigation
+   Navigation basic
 -----------------------*/
 .menu-icon{
     display: block;
@@ -49,17 +48,13 @@
     display: none;
     clear: left;
     
-    .no-js &{
+    .no-js &, .is-menu-on &{
         display: block;   
-    }
-    
-    .is-menu-on &{
-        display: block;
     }
     
     ul{
         list-style: none;
-        margin: 0;
+        padding-left: 1em;
     }
 	li {
 		a {
@@ -69,6 +64,7 @@
 			color: #575757;
 			text-decoration: none;
 			padding: 0.75em;
+            white-space: nowrap;
 		}
     }
 }
@@ -98,8 +94,7 @@
             position: relative;
 
             a {
-                line-height: $header-height;
-                padding: 0 .75em;
+                padding: 20px 1.5em;
                 &:hover, &:focus {
                     color: $main-color;
                 }
@@ -115,5 +110,35 @@
             color: $main-color;
         }
         
+        /* The sub menu */
+        .sub-menu{
+            position: absolute;
+            right: 0;
+            padding: 0;
+            background: $dark-gray;
+            a{
+                color: $light-gray;
+            }
+        }
+        
     }
+}
+
+
+/*----------------------
+   Sub menu system
+-----------------------*/
+.menu-item-has-children{
+    
+    .sub-menu{
+        opacity: 0;
+        visibility: hidden;
+        transition: all .2s ease-in-out;
+    }
+    
+    &:hover .sub-menu{
+        opacity: 1;
+        visibility: visible;
+    }
+    
 }

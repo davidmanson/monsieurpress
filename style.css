@@ -348,9 +348,8 @@ a {
 -----------------------*/
 .header {
   background-color: #FFFFFF;
-  padding: .5em;
   width: 100%;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   position: fixed;
   z-index: 999; }
   .single-post .header {
@@ -360,7 +359,7 @@ a {
    Global wrapper
 -----------------------*/
 .site-content {
-  padding-top: 66px; }
+  padding-top: 61px; }
 
 /*----------------------
    Logo
@@ -371,10 +370,10 @@ a {
   height: 24px;
   width: auto;
   box-sizing: content-box;
-  padding: 13px 0; }
+  padding: 18px 0; }
 
 /*----------------------
-   Navigation
+   Navigation basic
 -----------------------*/
 .menu-icon {
   display: block; }
@@ -382,20 +381,19 @@ a {
 .site-nav {
   display: none;
   clear: left; }
-  .no-js .site-nav {
-    display: block; }
-  .is-menu-on .site-nav {
+  .no-js .site-nav, .is-menu-on .site-nav {
     display: block; }
   .site-nav ul {
     list-style: none;
-    margin: 0; }
+    padding-left: 1em; }
   .site-nav li a {
     font-size: 14px;
     font-weight: 600;
     display: block;
     color: #575757;
     text-decoration: none;
-    padding: 0.75em; }
+    padding: 0.75em;
+    white-space: nowrap; }
 
 /*----------------------
    Navigation desktop
@@ -407,22 +405,42 @@ a {
     clear: none;
     float: right;
     display: block !important;
-    /* highlight current page */ }
+    /* highlight current page */
+    /* The sub menu */ }
     .site-nav ul {
       margin-top: 0; }
     .site-nav li {
       float: left;
       position: relative; }
       .site-nav li a {
-        line-height: 50px;
-        padding: 0 .75em; }
+        padding: 20px 1.5em; }
         .site-nav li a:hover, .site-nav li a:focus {
           color: #FF5800; }
     .site-nav li.current-menu-item > a,
     .site-nav li.current_page_item > a,
     .site-nav li.current_page_ancestor > a,
     .site-nav .current-menu-ancestor > a {
-      color: #FF5800; } }
+      color: #FF5800; }
+    .site-nav .sub-menu {
+      position: absolute;
+      right: 0;
+      padding: 0;
+      background: #333333; }
+      .site-nav .sub-menu a {
+        color: #f8f9fa; } }
+
+/*----------------------
+   Sub menu system
+-----------------------*/
+.menu-item-has-children .sub-menu {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out; }
+
+.menu-item-has-children:hover .sub-menu {
+  opacity: 1;
+  visibility: visible; }
 
 /*----------------------
    Footer style
