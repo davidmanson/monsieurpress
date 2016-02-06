@@ -430,12 +430,12 @@ a {
   /*----------------------
        Sub menu system
     -----------------------*/
-  .menu-item-has-children .sub-menu {
+  .site-nav .menu-item-has-children .sub-menu {
     opacity: 0;
     visibility: hidden;
     -webkit-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out; }
-  .menu-item-has-children:hover .sub-menu {
+  .site-nav .menu-item-has-children:hover .sub-menu {
     opacity: 1;
     visibility: visible; } }
 
@@ -566,6 +566,7 @@ a {
     Buttons
 -----------------------*/
 .btn,
+input.btn,
 a.btn,
 a.btn:visited {
   display: inline-block;
@@ -757,73 +758,21 @@ a.btn:visited {
     display: block;
     clear: both; } }
 
-/******************************************************************
-Site Name:
-Author:
-
-Stylesheet: Form Styles
-
-Strongly inspired by underscores.me
-
-******************************************************************/
-/*********************
-INPUTS
-*********************/
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"],
-input[type="number"],
-input[type="tel"],
-input[type="range"],
-input[type="date"],
-input[type="month"],
-input[type="week"],
-input[type="time"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="color"], select, textarea {
-  color: #666;
-  border: 1px solid #ccc;
-  border-radius: 3px; }
-  input[type="text"]:focus,
-  input[type="email"]:focus,
-  input[type="url"]:focus,
-  input[type="password"]:focus,
-  input[type="search"]:focus,
-  input[type="number"]:focus,
-  input[type="tel"]:focus,
-  input[type="range"]:focus,
-  input[type="date"]:focus,
-  input[type="month"]:focus,
-  input[type="week"]:focus,
-  input[type="time"]:focus,
-  input[type="datetime"]:focus,
-  input[type="datetime-local"]:focus,
-  input[type="color"]:focus, select:focus, textarea:focus {
-    color: #111; }
-
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"],
-input[type="number"],
-input[type="tel"],
-input[type="range"],
-input[type="date"],
-input[type="month"],
-input[type="week"],
-input[type="time"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="color"] {
-  padding: 3px; }
-
-select {
-  border: 1px solid #ccc; }
-
+/*----------------------
+    Forms
+-----------------------*/
+input,
 textarea {
-  padding-left: 3px;
-  width: 100%; }
+  padding: .5em;
+  margin-bottom: .5em;
+  display: block;
+  width: 100%;
+  box-shadow: none;
+  border: thin solid #f5f5f5; }
+  input:focus,
+  textarea:focus {
+    outline: none;
+    border-color: #FF5800; }
+
+input[type="submit"] {
+  margin-top: .85rem; }

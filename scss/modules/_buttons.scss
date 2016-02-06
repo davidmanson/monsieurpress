@@ -1,7 +1,6 @@
 /*----------------------
     Buttons
 -----------------------*/
-
 %btn {
     display: inline-block;
     text-decoration: none;
@@ -27,6 +26,7 @@
 
 
 .btn,
+input.btn,
 a.btn,
 a.btn:visited {
     @extend %btn;

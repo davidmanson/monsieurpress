@@ -1,6 +1,7 @@
 /*----------------------
    Header wrapper
 -----------------------*/
+
 .header {
 	background-color: $white;
     width: 100%;
@@ -125,7 +126,7 @@
     /*----------------------
        Sub menu system
     -----------------------*/
-    .menu-item-has-children{
+    .site-nav .menu-item-has-children{
 
         .sub-menu{
             opacity: 0;

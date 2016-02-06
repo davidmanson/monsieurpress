@@ -1,58 +1,21 @@
-/******************************************************************
-Site Name:
-Author:
+/*----------------------
+    Forms
+-----------------------*/
 
-Stylesheet: Form Styles
-
-Strongly inspired by underscores.me
-
-******************************************************************/
-$color__text-input: #666;
-$color__text-input-focus: #111;
-$color__border-input: #ccc;
-
-
-/*********************
-INPUTS
-*********************/
-
-%global_input_style{
-    color: $color__text-input;
-	border: 1px solid $color__border-input;
-	border-radius: 3px;
-
-	&:focus {
-		color: $color__text-input-focus;
-	}
-}
-
-
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"],
-input[type="number"],
-input[type="tel"],
-input[type="range"],
-input[type="date"],
-input[type="month"],
-input[type="week"],
-input[type="time"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="color"] {
-    @extend %global_input_style;
-	padding: 3px;
-}
-
-select {
-    @extend %global_input_style;
-	border: 1px solid $color__border-input;
-}
-
+input,
 textarea {
-    @extend %global_input_style;
-	padding-left: 3px;
-	width: 100%;
+    padding: .5em;
+    margin-bottom: .5em;
+    display: block;
+    width: 100%;
+    box-shadow: none;
+    border: thin solid $light-gray;
+    &:focus{
+        outline: none;
+        border-color: $main-color;
+    }
+}
+
+input[type="submit"] {
+    margin-top: .85rem;
 }
