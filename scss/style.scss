@@ -23,22 +23,17 @@ Tags: starter theme sidebar responsive
 @import "base/_grid";
 
 
-//---------------------
-// IMPORTING LAYOUT
-//---------------------
-@import "layout/_header";
-@import "layout/_footer";
-@import "layout/_sections";
-
-
 //-----------------------
-// IMPORTING COMPONENTS
+// IMPORTING MODULES
 //-----------------------
-@import "components/_titles";
-@import "components/_burger_btn";
-@import "components/_widgets";
-@import "components/_buttons";
-@import "components/_intro";
-@import "components/_pagination";
-@import "components/_post";
-@import "components/_forms";
+@import "modules/_header";
+@import "modules/_footer";
+@import "modules/_sections";
+@import "modules/_titles";
+@import "modules/_burger_btn";
+@import "modules/_widgets";
+@import "modules/_buttons";
+@import "modules/_intro";
+@import "modules/_pagination";
+@import "modules/_post";
+@import "modules/_forms";
