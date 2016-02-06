@@ -48,7 +48,7 @@
             <div class="l-col-4">
                 <h3>Made for developer</h3>
                 <p>
-                    I've been made by a developer who love organisation, simplicity and speed , If you are like him, you might love me. 
+                    I've been made by a developers who love organisation, simplicity and speed , If you are like him, you might love me. 
                 </p>
             </div>
             <div class="l-col-4">
