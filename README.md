@@ -30,6 +30,7 @@ I have some embeded gulp tasks that can be use for you workflow :
 ## Todo
 - Add rlt compatibility
 - More flexible padding for sections
+- Improve homepage mobile design
 - Add a lightweight theme option page
 
 ## Note
