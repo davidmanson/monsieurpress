@@ -60,7 +60,7 @@
             <div class="l-col-4">
                 <h3>Super fast</h3>
                 <p>
-                    Yeah I'm fast ! Open your developer tools and check my weight, under 30kb for this page, yes it's WordPress ! I love diet.
+                    Yeah I'm fast ! Open your developer tools and check my weight, under 20kb for this page, yes it's WordPress ! I love diet.
                 </p>
             </div>
         </div>

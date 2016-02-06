@@ -1,12 +1,15 @@
 /*----------------------
-   Post Meta
+   Post title
 -----------------------*/
-.byline {
+.single .entry-header{
+    padding: 2em 0;
+    border-bottom: 1px solid $light-gray;
+}
+.entry-meta {
 	color: $gray;
 	font-style: italic;
 	margin: 0;
 }
-
 
 /*----------------------
    Post content

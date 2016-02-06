@@ -646,9 +646,13 @@ a.btn:visited {
     color: #FFFFFF; }
 
 /*----------------------
-   Post Meta
+   Post title
 -----------------------*/
-.byline {
+.single .entry-header {
+  padding: 2em 0;
+  border-bottom: 1px solid #f5f5f5; }
+
+.entry-meta {
   color: #9e9e9f;
   font-style: italic;
   margin: 0; }
