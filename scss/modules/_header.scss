@@ -97,6 +97,7 @@
                 padding: 20px 1.5em;
                 &:hover, &:focus {
                     color: $main-color;
+                    background: $light-gray;
                 }
             }
 
@@ -115,9 +116,9 @@
             position: absolute;
             right: 0;
             padding: 0;
-            background: $light-gray;
-            a{
-                color: $dark-gray;
+            background: $white;
+            > li{
+                float: none;
             }
         }
         

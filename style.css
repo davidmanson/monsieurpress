@@ -414,7 +414,8 @@ a {
       .site-nav li a {
         padding: 20px 1.5em; }
         .site-nav li a:hover, .site-nav li a:focus {
-          color: #FF5800; }
+          color: #FF5800;
+          background: #f5f5f5; }
     .site-nav li.current-menu-item > a,
     .site-nav li.current_page_item > a,
     .site-nav li.current_page_ancestor > a,
@@ -424,9 +425,9 @@ a {
       position: absolute;
       right: 0;
       padding: 0;
-      background: #f5f5f5; }
-      .site-nav .sub-menu a {
-        color: #333333; }
+      background: #FFFFFF; }
+      .site-nav .sub-menu > li {
+        float: none; }
   /*----------------------
        Sub menu system
     -----------------------*/
