@@ -11,6 +11,7 @@ $btn-color: $main-color;
     transition: transform 0.5s;
     margin-top: 7px;
 }
+
 .menu-icon > span {
     position: absolute;
     top: 50%;
@@ -21,34 +22,29 @@ $btn-color: $main-color;
     height: 2px;
     background-color: $btn-color;
     transition: background 0.5s;
+    &:before, &:after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateY(-6px);
+        display: block;
+        width: 22px;
+        height: 2px;
+        background-color: $btn-color;
+        transition: transform 0.5s;
+    }
+    &:after{
+        transform: translateY(6px);
+    }
 }
 
-.menu-icon > span::before,
-.menu-icon > span::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translateY(-6px);
-    display: block;
-    width: 22px;
-    height: 2px;
-    background-color: $btn-color;
-    transition: transform 0.5s;
-}
-
-.menu-icon > span::after {
-    transform: translateY(6px);
-}
-
-.menu-on .menu-icon > span {
+.is-menu-on .menu-icon > span {
     background: transparent;
-}
-
-.menu-on .menu-icon > span::before {
-    transform: translateY(0) rotate(45deg);
-}
-
-.menu-on .menu-icon > span::after {
-    transform: translateY(0) rotate(-45deg);
+    &:before{
+        transform: translateY(0) rotate(45deg);
+    }
+    &:after{
+        transform: translateY(0) rotate(-45deg);
+    }
 }
