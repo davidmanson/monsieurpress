@@ -27,7 +27,7 @@
     <div class="l-container">
         <div class="l-col-12">
             <p class="text-large text-center">
-                Hello developer ! I'm a WordPress starter theme, I'm not all naked and actualy the webpage you are in is me ! I'm very minimal & easy to understand, I use modern workflow like gulp, sass, and love. I'm not meant for being used as a parent theme, just adopt me and hack me !
+                Hello developers ! I'm a WordPress starter theme, I'm not all naked and actualy the webpage you are in is me ! I'm very minimal & easy to understand, I use modern workflow like gulp, sass, and love. I'm not meant for being used as a parent theme, just adopt me and hack me !
                 feel good here ? Give me a try !
             </p>
         </div>
@@ -60,7 +60,7 @@
             <div class="l-col-4">
                 <h3>Super fast</h3>
                 <p>
-                    Yeah I'm fast ! Open your developer tools and check my weight, under 20kb for this page, yes it's WordPress ! I love diet.
+                    Yeah I'm fast ! Open your developer tools and check my weight, under 25kb for this page, yes it's WordPress ! I love diet.
                 </p>
             </div>
         </div>
