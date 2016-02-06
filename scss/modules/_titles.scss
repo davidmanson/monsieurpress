@@ -6,9 +6,7 @@
     text-align: center;
 
     h2{
-        font-family: $secondary-font;
-        font-size: 30px;
-        font-weight: bold;
+        font: bold 30px/1.5em $secondary-font;
         text-transform: uppercase;
         margin: 0;
     }

@@ -481,9 +481,7 @@ a {
   color: #FFFFFF;
   text-align: center; }
   .page-title h2 {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 30px;
-    font-weight: bold;
+    font: bold 30px/1.5em "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     margin: 0; }
 
