@@ -31,6 +31,7 @@ I have some embeded gulp tasks that can be use for you workflow :
 - Add rlt compatibility
 - More flexible padding for sections
 - Improve homepage mobile design
+- Make minimal comment design
 - Add a lightweight theme option page
 
 ## Note
