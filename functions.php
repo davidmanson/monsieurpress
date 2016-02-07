@@ -114,6 +114,11 @@ function front_assets_load() {
     /* Enqueue theme script & style */
     wp_enqueue_style( 'site-stylesheet' );
     wp_enqueue_script( 'site-js' );
+    
+    /* Enqueue comment-reply script if needed */
+    if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+		wp_enqueue_script( 'comment-reply' );
+	}
 }
 
 
