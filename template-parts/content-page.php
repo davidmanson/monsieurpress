@@ -14,6 +14,9 @@
 
 	<div class="entry-content">
 		<?php the_content(); ?>
+		<p class="tags">
+		    <?php the_tags(); ?>
+        </p>
 		<?php wp_link_pages(); ?>
 	</div>
 
