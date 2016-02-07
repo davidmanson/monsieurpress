@@ -17,7 +17,9 @@
 		<p class="tags">
 		    <?php the_tags(); ?>
         </p>
-		<?php wp_link_pages(); ?>
+        <div class="pagination">
+		    <?php wp_link_pages(); ?>
+		</div>
 	</div>
 
 	<footer class="entry-footer">
