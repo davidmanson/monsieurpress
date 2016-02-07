@@ -2,7 +2,7 @@
    Post title
 -----------------------*/
 .single .entry-header{
-    padding: 2em 0;
+    padding: 0 0 1.5em 0;
     border-bottom: 1px solid $light-gray;
 }
 .entry-meta {
@@ -10,10 +10,19 @@
 	font-style: italic;
 	margin: 0;
 }
+.sticky{
+    padding: 1em;
+    border: 1px solid $main-color;
+    background: $light-gray;
+}
 
 /*----------------------
    Post content
 -----------------------*/
+.post{
+    margin: 2em 0;
+}
+
 .entry-content {
     padding: 1.5em 0;
 
