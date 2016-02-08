@@ -18,17 +18,21 @@ Tags: light, right-sidebar, responsive-layout, custom-menu, sticky-post
 @import "base/_config";
 @import "base/_utils";
 @import "base/_normalize";
-@import "base/_helpers";
 @import "base/_typography";
-@import "base/_grid";
+
+
+//---------------------
+// IMPORTING Layout
+//---------------------
+@import "layout/_header";
+@import "layout/_footer";
+@import "layout/_sections";
+@import "layout/_grid";
 
 
 //-----------------------
 // IMPORTING MODULES
 //-----------------------
-@import "modules/_header";
-@import "modules/_footer";
-@import "modules/_sections";
 @import "modules/_titles";
 @import "modules/_burger_btn";
 @import "modules/_widgets";

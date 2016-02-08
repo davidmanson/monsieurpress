@@ -1,7 +1,7 @@
-//*******************************************************
+//************************************************************
 // UTILS FILE
-// Here we put the placeholders, mixins & functions
-//*******************************************************
+// Here we put the placeholders, helpers, mixins & functions
+//************************************************************
 
 //-----------------------
 // Placeholders
@@ -15,4 +15,23 @@
     &:after {
         clear: both;
     }
+}
+
+
+//-----------------------
+// Helpers
+//-----------------------
+.clearfix{
+    @extend %clearfix;
+}
+
+.text-center{
+    text-align: center;   
+}
+
+.text-large{
+    font-size: 20px;
+    color: $dark-gray;
+    font-weight: 200;
+    line-height: 1.8em;
 }
