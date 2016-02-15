@@ -9,7 +9,7 @@
     position: fixed;
     z-index: 999;
     .single-post &{
-        border-bottom: 1px solid #efefef;   
+        border-bottom: 1px solid #efefef;
     }
 }
 
@@ -48,11 +48,11 @@
 .site-nav {
     display: none;
     clear: left;
-    
+
     .no-js &, .is-menu-on &{
-        display: block;   
+        display: block;
     }
-    
+
     ul{
         list-style: none;
         padding-left: 1em;
@@ -77,7 +77,7 @@
 @media only screen and (min-width: 768px) {
 
     .menu-icon{
-        display: none;   
+        display: none;
     }
 
     .site-nav {
@@ -110,7 +110,7 @@
         .current-menu-ancestor > a{
             color: $main-color;
         }
-        
+
         /* The sub menu */
         .sub-menu{
             position: absolute;
@@ -121,9 +121,9 @@
                 float: none;
             }
         }
-        
+
     }
-    
+
     /*----------------------
        Sub menu system
     -----------------------*/

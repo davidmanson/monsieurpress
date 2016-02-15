@@ -20,7 +20,7 @@
         max-width: 680px;
     }
 }
- 
+
 
 /*-----------------------
     Lines
@@ -37,13 +37,13 @@
     float: left;
     padding: 0 1.5em;
     width: 100%;
-    min-height: 1px; 
-}   
- 
+    min-height: 1px;
+}
+
 @media screen and (min-width: 768px) {
-    @for $i from 1 through 12 {      
-        .l-col-#{$i} {         
-            width: 100% / 12 * $i;   
+    @for $i from 1 through 12 {
+        .l-col-#{$i} {
+            width: 100% / 12 * $i;
         }
     }
 }
@@ -65,7 +65,24 @@
     Padding up & down
 --------------------------------*/
 @for $i from 1 through 11 {
-    .l-pad-#{$i}{   
-        padding: #{$i}em 0;
+    .l-ptop-#{$i}, .l-pad-#{$i}{
+        padding-top: #{$i}em;
+    }
+    .l-pbottom-#{$i}, .l-pad-#{$i}{
+        padding-bottom: #{$i}em;
+    }
+}
+
+/*-------------------------------
+    Padding up & down mobile
+--------------------------------*/
+@media screen and (max-width: 767px) {
+    @for $i from 1 through 11 {
+        .l-mptop-#{$i}, .l-mpad-#{$i}{
+            padding-top: #{$i}em;
+        }
+        .l-mpbottom-#{$i}, .l-mpad-#{$i}{
+            padding-bottom: #{$i}em;
+        }
     }
 }

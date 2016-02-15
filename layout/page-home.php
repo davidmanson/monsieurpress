@@ -7,7 +7,7 @@
 <?php get_header(); ?>
 
 <!-- introduction -->
-<section class="l-dark l-pad-11">
+<section class="l-dark l-pad-11 l-mpad-3">
     <div class="l-container">
         <div class="l-col-12">
             <div class="intro-text">
@@ -15,14 +15,14 @@
             </div>
             <div class="text-center">
                 <a href="https://github.com/dadipaq/monsieurpress/archive/master.zip" class="btn contact-btn-home">Download</a>
-                <a href="https://github.com/dadipaq/monsieurpress" class="btn contact-btn-home">Github</a> 
+                <a href="https://github.com/dadipaq/monsieurpress" class="btn contact-btn-home">Github</a>
            </div>
         </div>
     </div>
 </section>
 
 
-<!-- Description --> 
+<!-- Description -->
 <section class="l-light-gray l-pad-3">
     <div class="l-container">
         <div class="l-col-12">
@@ -42,13 +42,13 @@
             <h2 class="section-title">What makes me different ?</h2>
         </div>
     </div>
-    
+
     <div class="l-container text-center">
         <div class="l-row">
             <div class="l-col-4">
                 <h3>Made for developer</h3>
                 <p>
-                    I've been made by a developers who love organisation, simplicity and speed , If you are like him, you might love me. 
+                    I've been made by a developers who love organisation, simplicity and speed , If you are like him, you might love me.
                 </p>
             </div>
             <div class="l-col-4">
@@ -64,7 +64,7 @@
                 </p>
             </div>
         </div>
-        
+
         <div class="l-row">
             <div class="l-col-4">
                 <h3>Easy to understand</h3>
