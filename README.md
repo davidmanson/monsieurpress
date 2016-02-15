@@ -9,15 +9,15 @@ Hello developer ! I'm a WordPress starter theme, I'm not all naked and actualy t
 - Npm (packaged in node)
 
 ## How to use me ?
-Go to your wordpress theme folder with your terminal, and type the following commands : 
+Go to your wordpress theme folder with your terminal, and type the following commands :
 
 	$ git clone https://github.com/dadipaq/monsieurpress.git [yourthemename]
     $ cd [yourthemename]
 	$ npm install
 	$ gulp
- 
+
 You are now ready for happy coding !
- 
+
 ## Gulp tasks
 I have some embeded gulp tasks that can be use for you workflow :
 
@@ -29,9 +29,6 @@ I have some embeded gulp tasks that can be use for you workflow :
 
 ## Todo
 - Add rlt compatibility
-- More flexible padding for sections
-- Improve homepage mobile design
-- Make minimal comment design
 - Add a lightweight theme option page
 
 ## Note
