@@ -2,16 +2,15 @@
    Header wrapper
 -----------------------*/
 .header {
-		background-color: $white;
+    background-color: $white;
     width: 100%;
 }
-
 
 
 /*----------------------
    Logo
 -----------------------*/
-.site-logo img{
+.site-logo img {
     float: left;
     display: block;
     height: 24px;
@@ -20,105 +19,91 @@
 }
 
 
-
 /*----------------------
    Navigation basic
 -----------------------*/
 .site-nav {
     display: none;
     clear: left;
-
-    .no-js &, .is-menu-on &{
+    .no-js &,
+    .is-menu-on & {
         display: block;
     }
-
-    ul{
+    ul {
         list-style: none;
         padding-left: 1em;
     }
-
-		li {
-				a {
-		        font-size: 14px;
-						display: block;
-						color: $dark-gray;
-						text-decoration: none;
-						padding: 0.75em;
-		        white-space: nowrap;
-				}
+    li {
+        a {
+            font-size: 14px;
+            display: block;
+            color: $dark-gray;
+            text-decoration: none;
+            padding: 0.75em;
+            white-space: nowrap;
+        }
     }
 }
-
 
 
 /*----------------------
    Navigation desktop
 -----------------------*/
 @media only screen and (min-width: 768px) {
-
-    .menu-icon{
+    .menu-icon {
         display: none;
     }
-
     .site-nav {
         clear: none;
         float: right;
         display: block !important;
-
         ul {
-            margin-top:0;
+            margin-top: 0;
         }
-
         li {
             float: left;
             position: relative;
-
             a {
                 padding: 20px 1.5em;
-                &:hover, &:focus {
+                &:hover,
+                &:focus {
                     color: $main-color;
                     background: $light-gray;
                 }
             }
-
         }
-
         /* highlight current page */
         li.current-menu-item > a,
         li.current_page_item > a,
         li.current_page_ancestor > a,
-        .current-menu-ancestor > a{
+        .current-menu-ancestor > a {
             color: $main-color;
         }
-
         /* The sub menu */
-        .sub-menu{
+        .sub-menu {
             position: absolute;
             right: 0;
             padding: 0;
             background: $white;
-            > li{
+            > li {
                 float: none;
             }
         }
-
     }
 
+    
     /*----------------------
        Sub menu system
     -----------------------*/
-    .site-nav .menu-item-has-children{
-
-        .sub-menu{
+    .site-nav .menu-item-has-children {
+        .sub-menu {
             opacity: 0;
             visibility: hidden;
-            transition: all .2s ease-in-out;
+            transition: all 0.2s ease-in-out;
         }
-
-        &:hover .sub-menu{
+        &:hover .sub-menu {
             opacity: 1;
             visibility: visible;
         }
-
     }
 }

@@ -1,32 +1,31 @@
 /*----------------------
    Section style
 -----------------------*/
-.l-header{
-    background-color: $white;   
+.l-header {
+    background-color: $white;
 }
 
-.l-white{
+.l-white {
     background: $white;
 }
 
-.l-dark{
+.l-dark {
     background: #A59595;
 }
 
-.l-light-gray{
+.l-light-gray {
     background: $light-gray;
 }
-
 
 /*----------------------
    Specific section
 -----------------------*/
-.marketing-theme{
-    .l-col-4{
+.marketing-theme {
+    .l-col-4 {
         margin-top: 2em;
         margin-bottom: 2em;
     }
-    h3{
+    h3 {
         text-transform: uppercase;
         font-weight: bold;
         color: $main-color;
