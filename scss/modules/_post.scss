@@ -5,6 +5,9 @@
     padding: 0 0 1.5em 0;
     border-bottom: 1px solid $light-gray;
 }
+.entry-title{
+    font-size: 42px;
+}
 .entry-meta {
 	color: $gray;
 	font-style: italic;
@@ -62,9 +65,7 @@
     }
 
     pre {
-        background: $black;
-        color: $light-gray;
-        font-size: 0.9em;
+        background: $light-gray;
         padding: 1.5em;
         margin: 0 0 1.5em;
         border-radius: 3px;
@@ -107,15 +108,14 @@
    Post Caption style
 -----------------------*/
 .wp-caption {
-    max-width: 100%;
     background: #eee;
     padding: 5px;
 
     /* images inside wp-caption */
     img {
-        max-width: 100%;
         margin-bottom: 0;
         width: 100%;
+        height: auto;
     }
 
     p.wp-caption-text {

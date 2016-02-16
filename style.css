@@ -719,6 +719,9 @@ a.btn:visited {
   padding: 0 0 1.5em 0;
   border-bottom: 1px solid #f5f5f5; }
 
+.entry-title {
+  font-size: 42px; }
+
 .entry-meta {
   color: #9e9e9f;
   font-style: italic;
@@ -762,9 +765,7 @@ a.btn:visited {
     max-width: 100%;
     height: auto; }
   .entry-content pre {
-    background: #111111;
-    color: #f5f5f5;
-    font-size: 0.9em;
+    background: #f5f5f5;
     padding: 1.5em;
     margin: 0 0 1.5em;
     border-radius: 3px; }
@@ -807,14 +808,13 @@ a.btn:visited {
    Post Caption style
 -----------------------*/
 .wp-caption {
-  max-width: 100%;
   background: #eee;
   padding: 5px;
   /* images inside wp-caption */ }
   .wp-caption img {
-    max-width: 100%;
     margin-bottom: 0;
-    width: 100%; }
+    width: 100%;
+    height: auto; }
   .wp-caption p.wp-caption-text {
     font-size: 0.85em;
     margin: 4px 0 7px;
