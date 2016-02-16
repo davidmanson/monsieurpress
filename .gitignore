@@ -44,6 +44,7 @@ tmp/
 .idea/
 node_modules/
 .sass-cache
+shipitfile.js
 temp/
 ._*
 .Trashes
