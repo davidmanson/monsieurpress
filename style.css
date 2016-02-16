@@ -635,7 +635,7 @@ a {
 .btn,
 input.btn,
 a.btn,
-a.btn:visited {
+a.btn:visited, .comment-respond input.submit {
   display: inline-block;
   text-decoration: none;
   color: #FFFFFF;
@@ -648,14 +648,14 @@ a.btn:visited {
   -webkit-transition: all 0.14s ease-in-out;
   transition: all 0.14s ease-in-out; }
   .btn:hover,
-  a.btn:hover:visited, .btn:focus,
-  a.btn:focus:visited {
+  a.btn:hover:visited, .comment-respond input.submit:hover, .btn:focus,
+  a.btn:focus:visited, .comment-respond input.submit:focus {
     color: #FF5800;
     text-decoration: none;
     outline: none;
     background: white; }
   .btn:active,
-  a.btn:active:visited {
+  a.btn:active:visited, .comment-respond input.submit:active {
     top: 1px; }
 
 /*----------------------
@@ -880,6 +880,13 @@ a.btn:visited {
     margin: 2em 0; }
     .comment > .comment-body > .reply {
       text-align: right; }
+
+/*
+ * Comment response
+ */
+.comment-respond input.submit {
+  color: #FF5800;
+  border-color: #FF5800; }
 
 /*
  * from underscores.me starter theme

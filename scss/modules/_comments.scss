@@ -14,6 +14,15 @@
     }
 }
 
+/*
+ * Comment response
+ */
+.comment-respond input.submit{
+    @extend %btn;
+    color: $main-color;
+    border-color: $main-color;
+}
+
 
 
 /*
@@ -27,4 +36,3 @@
 .bypostauthor {
 	display: block;
 }
-
