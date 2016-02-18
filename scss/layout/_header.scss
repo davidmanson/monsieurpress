@@ -3,6 +3,7 @@
 -----------------------*/
 .header {
     background-color: $white;
+    border-bottom: 1px solid $light-gray;
     width: 100%;
 }
 
@@ -91,7 +92,7 @@
         }
     }
 
-    
+
     /*----------------------
        Sub menu system
     -----------------------*/

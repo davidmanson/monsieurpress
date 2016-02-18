@@ -13,11 +13,6 @@
 	font-style: italic;
 	margin: 0;
 }
-.sticky{
-    padding: 1em;
-    border: 1px solid $main-color;
-    background: $light-gray;
-}
 
 
 /*----------------------
@@ -67,6 +62,7 @@
     pre {
         background: $light-gray;
         padding: 1.5em;
+        font-size: 16px;
         margin: 0 0 1.5em;
         border-radius: 3px;
     }
@@ -76,6 +72,16 @@
         padding-left: 2em;
     }
 
+}
+
+
+/*----------------------
+   Sticky post
+-----------------------*/
+.sticky{
+    padding: 1em;
+    border: 1px solid $main-color;
+    background: $light-gray;
 }
 
 
