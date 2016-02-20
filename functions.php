@@ -90,6 +90,16 @@ add_action( 'widgets_init', 'theme_sidebars' );
 
 
 /************************************
+ Apply theme's stylesheet to the visual editor.
+*************************************/
+function theme_add_editor_styles() {
+    add_editor_style( get_stylesheet_uri() );
+}
+add_action( 'init', 'theme_add_editor_styles' );
+
+
+
+/************************************
  Theme filters
 *************************************/
 function theme_filters(){
