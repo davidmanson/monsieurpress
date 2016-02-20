@@ -1,0 +1,1 @@
+!function(){var e,n,t,o;o=function(){e=document.getElementsByTagName("body")[0],n=document.getElementsByClassName("js-menu-toggle");for(var o=n.length;o--;)n[o].addEventListener("click",t)},t=function(){e.classList.toggle("is-menu-on")},document.addEventListener("DOMContentLoaded",o)}();

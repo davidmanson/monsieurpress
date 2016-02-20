@@ -63,12 +63,9 @@ gulp.task('images', function() {
  * - Launch the task before production
  -------------------------------------------*/
 gulp.task('compress', function() {
-    gulp.src('js/**/*.js')
+    gulp.src('js/src/*.js')
         .pipe(uglify())
-        .pipe(rename({
-            suffix: '.min'
-        }))
-        .pipe(gulp.dest('js/'));
+        .pipe(gulp.dest('js/dist/'));
 });
 
 
@@ -80,5 +77,5 @@ gulp.task('compress', function() {
 gulp.task('default',function() {
     livereload.listen();
     gulp.watch('scss/**/*.scss',['styles']);
+    gulp.watch('js/src/*.js',['compress']);
 });
-
