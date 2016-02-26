@@ -14,8 +14,8 @@
                 <h1>Hello, I'm MonsieurPress, a super cool, lightweight & simple WordPress starter theme for developers</h1>
             </div>
             <div class="text-center">
-                <a href="https://github.com/dadipaq/monsieurpress/archive/master.zip" class="btn contact-btn-home">Download</a>
-                <a href="https://github.com/dadipaq/monsieurpress" class="btn contact-btn-home">Github</a>
+                <a href="https://github.com/davidmanson/monsieurpress/archive/master.zip" class="btn contact-btn-home">Download</a>
+                <a href="https://github.com/davidmanson/monsieurpress" class="btn contact-btn-home">Github</a>
            </div>
         </div>
     </div>
