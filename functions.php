@@ -7,6 +7,7 @@
 
 // Load dependencies
 require_once( 'inc/helpers.php' );
+require_once( 'inc/customizer.php' );
 require_once( 'inc/custom-post-type.php' );
 
 
