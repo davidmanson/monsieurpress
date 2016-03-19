@@ -397,7 +397,6 @@ body {
   font-size: 100%;
   line-height: 1.5;
   color: #3A3A3A;
-  background-color: #FBFBFB;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
@@ -405,9 +404,9 @@ body {
     Link Styles
 ------------------------*/
 a {
-  color: #DB3C6E; }
+  color: #61CDF5; }
   a:visited {
-    color: #DB3C6E; }
+    color: #61CDF5; }
   a:hover, a:focus, a:active {
     text-decoration: underline; }
   a:focus {
@@ -419,9 +418,7 @@ a {
    Header wrapper
 -----------------------*/
 .header {
-  background-color: #FFFFFF;
-  border-bottom: 1px solid #f5f5f5;
-  width: 100%; }
+  background-color: #FFFFFF; }
 
 /*----------------------
    Logo
@@ -448,7 +445,7 @@ a {
   .site-nav li a {
     font-size: 14px;
     display: block;
-    color: #333333;
+    color: #FFFFFF;
     text-decoration: none;
     padding: 0.75em;
     white-space: nowrap; }
@@ -463,6 +460,7 @@ a {
     clear: none;
     float: right;
     display: block !important;
+    font-weight: bold;
     /* highlight current page */
     /* The sub menu */ }
     .site-nav ul {
@@ -473,20 +471,24 @@ a {
       .site-nav li a {
         padding: 20px 1.5em; }
         .site-nav li a:hover, .site-nav li a:focus {
-          color: #DB3C6E;
-          background: #f5f5f5; }
+          color: #61CDF5;
+          background: #FFFFFF; }
     .site-nav li.current-menu-item > a,
     .site-nav li.current_page_item > a,
     .site-nav li.current_page_ancestor > a,
     .site-nav .current-menu-ancestor > a {
-      color: #DB3C6E; }
+      color: #61CDF5;
+      background: #FFFFFF; }
     .site-nav .sub-menu {
       position: absolute;
       right: 0;
       padding: 0;
-      background: #FFFFFF; }
+      background: #333333; }
       .site-nav .sub-menu > li {
         float: none; }
+      .site-nav .sub-menu > li > a:hover,
+      .site-nav .sub-menu > li > a:focus {
+        background: #333333; }
   /*----------------------
        Sub menu system
     -----------------------*/
@@ -504,23 +506,21 @@ a {
 -----------------------*/
 .footer {
   text-align: center;
-  background-color: #404040;
-  color: #f5f5f5; }
+  border-top: 1px solid #333333;
+  font-size: 12px;
+  color: #333333; }
 
 /*----------------------
    Section style
 -----------------------*/
 .l-header {
-  background-color: #FFFFFF; }
-
-.l-white {
-  background: #FFFFFF; }
-
-.l-dark {
-  background: #3B1A01; }
+  background-color: #61CDF5; }
 
 .l-light-gray {
   background: #f5f5f5; }
+
+.l-white {
+  background: #FFFFFF; }
 
 /*----------------------
    Specific section
@@ -532,7 +532,7 @@ a {
 .marketing-theme h3 {
   text-transform: uppercase;
   font-weight: bold;
-  color: #DB3C6E; }
+  color: #61CDF5; }
 
 * {
   box-sizing: border-box; }
@@ -757,17 +757,6 @@ a {
   /* Above WP toolbar. */ }
 
 /*----------------------
-   Pages titles
------------------------*/
-.page-title {
-  color: #FFFFFF;
-  text-align: center; }
-  .page-title h2 {
-    font: bold 30px/1.5em "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-transform: uppercase;
-    margin: 0; }
-
-/*----------------------
    Section title
 -----------------------*/
 .section-title {
@@ -799,7 +788,7 @@ a {
   display: block;
   width: 22px;
   height: 2px;
-  background-color: #DB3C6E;
+  background-color: #FFFFFF;
   -webkit-transition: background 0.5s;
   transition: background 0.5s; }
   .menu-icon > span:before, .menu-icon > span:after {
@@ -812,7 +801,7 @@ a {
     display: block;
     width: 22px;
     height: 2px;
-    background-color: #DB3C6E;
+    background-color: #FFFFFF;
     -webkit-transition: -webkit-transform 0.5s;
     transition: -webkit-transform 0.5s;
     transition: transform 0.5s;
@@ -854,19 +843,19 @@ a.btn:visited, .comment-respond input.submit {
   color: #FFFFFF;
   font-size: 16px;
   padding: .5em 1.5em;
-  border: 2px solid #FFFFFF;
+  border: none;
   cursor: pointer;
-  background: transparent;
+  background: #61CDF5;
   text-align: center;
   -webkit-transition: all 0.14s ease-in-out;
   transition: all 0.14s ease-in-out; }
   .btn:hover,
   a.btn:hover:visited, .comment-respond input.submit:hover, .btn:focus,
   a.btn:focus:visited, .comment-respond input.submit:focus {
-    color: #DB3C6E;
+    color: #FFFFFF;
     text-decoration: none;
     outline: none;
-    background: white; }
+    background: #3a7b93; }
   .btn:active,
   a.btn:active:visited, .comment-respond input.submit:active {
     top: 1px; }
@@ -880,10 +869,16 @@ a.btn:visited, .comment-respond input.submit {
   -webkit-animation: txt-intro-anim 1.5s 1 ease;
           animation: txt-intro-anim 1.5s 1 ease; }
   .intro-text h1 {
-    font: 200 30px/1.5em "Helvetica Neue", Helvetica, Arial, sans-serif; }
+    margin: 0 0 .2em;
+    color: #61CDF5;
+    font: 300 50px/1.3em "Helvetica Neue", Helvetica, Arial, sans-serif; }
     @media only screen and (min-width: 1030px) {
       .intro-text h1 {
-        font-size: 45px; } }
+        font-size: 66px; } }
+  .intro-text h2 {
+    margin-top: 0;
+    font: 500 25px/1.4em "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #555555; }
 
 /*----------------------
    Intro animation
@@ -922,7 +917,7 @@ a.btn:visited, .comment-respond input.submit {
     text-decoration: none; }
   .pagination .page-numbers.current,
   .pagination .page-numbers:hover {
-    background: #DB3C6E;
+    background: #61CDF5;
     color: #FFFFFF; }
 
 /*----------------------
@@ -953,7 +948,7 @@ a.btn:visited, .comment-respond input.submit {
   .entry-content blockquote, .wp-editor blockquote {
     margin: 0 0 1.5em 0.75em;
     padding: 0 0 0 0.75em;
-    border-left: 3px solid #DB3C6E;
+    border-left: 3px solid #61CDF5;
     font-style: italic;
     color: #9e9e9f; }
   .entry-content dd, .wp-editor dd {
@@ -987,7 +982,7 @@ a.btn:visited, .comment-respond input.submit {
 -----------------------*/
 .sticky {
   padding: 1em;
-  border: 1px solid #DB3C6E;
+  border: 1px solid #61CDF5;
   background: #f5f5f5; }
 
 /*----------------------
@@ -1108,8 +1103,8 @@ a.btn:visited, .comment-respond input.submit {
  * Comment response
  */
 .comment-respond input.submit {
-  color: #DB3C6E;
-  border-color: #DB3C6E; }
+  color: #61CDF5;
+  border-color: #61CDF5; }
 
 /*
  * from underscores.me starter theme
@@ -1135,7 +1130,7 @@ textarea {
   input:focus,
   textarea:focus {
     outline: none;
-    border-color: #DB3C6E; }
+    border-color: #61CDF5; }
 
 input[type="submit"] {
   margin-top: .85rem; }

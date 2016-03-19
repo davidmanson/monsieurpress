@@ -20,7 +20,7 @@
 
                 <!-- logo -->
                 <a class="site-logo" href="<?php echo home_url(); ?>" rel="nofollow">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Logo"/>
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/logo-white.png" alt="Logo"/>
                 </a>
 
                 <!-- mobile button menu -->
@@ -32,7 +32,7 @@
                 <nav class="site-nav">
                     <?php wp_nav_menu(array(
                         'container' => false,
-                        'menu' => __( 'The Main Menu', 'mrpress' ),
+                        'theme_location' => 'main-nav',
                     )); ?>
                 </nav>
 

@@ -3,8 +3,6 @@
 -----------------------*/
 .header {
     background-color: $white;
-    border-bottom: 1px solid $light-gray;
-    width: 100%;
 }
 
 
@@ -38,7 +36,7 @@
         a {
             font-size: 14px;
             display: block;
-            color: $dark-gray;
+            color: $white;
             text-decoration: none;
             padding: 0.75em;
             white-space: nowrap;
@@ -58,6 +56,7 @@
         clear: none;
         float: right;
         display: block !important;
+        font-weight: bold;
         ul {
             margin-top: 0;
         }
@@ -69,7 +68,7 @@
                 &:hover,
                 &:focus {
                     color: $main-color;
-                    background: $light-gray;
+                    background: $white;
                 }
             }
         }
@@ -79,15 +78,21 @@
         li.current_page_ancestor > a,
         .current-menu-ancestor > a {
             color: $main-color;
+            background: $white;
         }
         /* The sub menu */
         .sub-menu {
             position: absolute;
             right: 0;
             padding: 0;
-            background: $white;
+            background: $dark-gray;
             > li {
                 float: none;
+            }
+
+            > li > a:hover,
+            > li > a:focus{
+                background: $dark-gray;
             }
         }
     }

@@ -19,6 +19,18 @@
 
 
 //-----------------------
+// Mixins
+//-----------------------
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
+
+
+//-----------------------
 // Helpers
 //-----------------------
 .clearfix{
@@ -26,7 +38,7 @@
 }
 
 .text-center{
-    text-align: center;   
+    text-align: center;
 }
 
 .text-large{

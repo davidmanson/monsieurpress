@@ -6,10 +6,17 @@
     text-align: center;
     animation: txt-intro-anim 1.5s 1 ease;
     h1{
-        font: 200 30px/1.5em $secondary-font;
+        margin: 0 0 .2em;
+        color: $main-color;
+        font: 300 50px/1.3em $secondary-font;
         @media only screen and (min-width: 1030px) {
-            font-size: 45px;
+            font-size: 66px;
         }
+    }
+    h2{
+        margin-top: 0;
+        font: 500 25px/1.4em $secondary-font;
+        color: #555555;
     }
 }
 

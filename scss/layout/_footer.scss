@@ -3,6 +3,7 @@
 -----------------------*/
 .footer {
 	text-align: center;
-	background-color: #404040;
-	color: $light-gray;
+	border-top: 1px solid $dark-gray;
+	font-size: 12px;
+	color: $dark-gray;
 }

@@ -65,12 +65,11 @@ add_image_size( 'mrpress-medium', 700, round(700/$thumb_realisation_ratio), true
 /************************************
  Menu
 *************************************/
-function theme_menu() {
-    register_nav_menus(array(
-		'main-nav' => __( 'The Main Menu', 'mrpress' ),   // main nav in header
-		'footer-links' => __( 'Footer Links', 'mrpress' ) // secondary nav in footer
-	));
-}
+register_nav_menus(array(
+	'main-nav' => __( 'The Main Menu', 'mrpress' ),
+	'footer-links' => __( 'Footer Links', 'mrpress' )
+));
+
 
 
 

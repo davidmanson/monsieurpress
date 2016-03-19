@@ -2,19 +2,15 @@
    Section style
 -----------------------*/
 .l-header {
-    background-color: $white;
-}
-
-.l-white {
-    background: $white;
-}
-
-.l-dark {
-    background: #3B1A01;
+    background-color: $main-color;
 }
 
 .l-light-gray {
     background: $light-gray;
+}
+
+.l-white {
+    background: $white;
 }
 
 /*----------------------

@@ -7,17 +7,17 @@
     color: $white;
     font-size: 16px;
     padding: .5em 1.5em;
-    border: 2px solid $white;
+    border: none;
     cursor: pointer;
-    background: transparent;
+    background: $main-color;
     text-align: center;
     transition: all 0.14s ease-in-out;
 
     &:hover, &:focus {
-        color: $main-color;
+        color: $white;
         text-decoration: none;
         outline: none;
-        background: white;
+        background: shade($main-color, 40%);
     }
     &:active {
         top: 1px;
@@ -31,4 +31,3 @@ a.btn,
 a.btn:visited {
     @extend %btn;
 }
-

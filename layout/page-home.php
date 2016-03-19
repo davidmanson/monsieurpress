@@ -11,7 +11,8 @@
     <div class="l-container">
         <div class="l-col-12">
             <div class="intro-text">
-                <h1>Hello, I'm MonsieurPress, a super cool, lightweight & simple WordPress starter theme for developers</h1>
+                <h1>Hello, I'm MonsieurPress,</h1>
+                <h2>a super cool, lightweight & simple WordPress starter theme for developers</h2>
             </div>
             <div class="text-center">
                 <a href="<?php echo get_theme_mod("primary_cta_link"); ?>" class="btn">Download</a>
@@ -25,7 +26,7 @@
 <!-- Description -->
 <section class="l-light-gray l-pad-3">
     <div class="l-container">
-        <div class="l-col-12">
+        <div class="l-col-8 l-col-push-2">
             <p class="text-large text-center">
                 Hello developers ! I'm a WordPress starter theme, I'm not all naked and actualy the webpage you are in is me ! I'm very minimal & easy to understand, I use modern workflow like gulp, sass, and love. I'm not meant for being used as a parent theme, just adopt me and hack me !
                 feel good here ? Give me a try !
