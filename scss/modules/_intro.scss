@@ -1,10 +1,13 @@
 /*----------------------
    Intro Home
 -----------------------*/
+.home-intro{
+    animation: txt-intro-anim 1.5s 1 ease;
+}
+
 .intro-text{
     color: $white;
     text-align: center;
-    animation: txt-intro-anim 1.5s 1 ease;
     h1{
         margin: 0 0 .2em;
         color: $main-color;

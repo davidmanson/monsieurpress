@@ -4,7 +4,7 @@
     <main role="main" class="l-col-8">
         <?php
         while (have_posts()) : the_post();
-            get_template_part( 'template-parts/content', 'page' );
+            get_template_part( 'partials/content', 'page' );
             comments_template();
         endwhile;
         ?>

@@ -10,11 +10,11 @@ License URI: http://www.wtfpl.net/
 Text Domain: mrpress
 Tags: light, right-sidebar, responsive-layout, custom-menu, sticky-post
 */
-.clearfix:before, .l-container:before, .l-row:before, .pagination:before, .clearfix:after, .l-container:after, .l-row:after, .pagination:after {
+.clearfix:before, .l-container:before, .pagination:before, .clearfix:after, .l-container:after, .pagination:after {
   content: " ";
   display: table; }
 
-.clearfix:after, .l-container:after, .l-row:after, .pagination:after {
+.clearfix:after, .l-container:after, .pagination:after {
   clear: both; }
 
 .text-center {
@@ -534,6 +534,12 @@ a {
   font-weight: bold;
   color: #61CDF5; }
 
+/*-----------------------
+    Config
+------------------------*/
+/*-----------------------
+    Global
+------------------------*/
 * {
   box-sizing: border-box; }
 
@@ -541,25 +547,20 @@ a {
     Container
 ------------------------*/
 .l-container {
-  max-width: 1180px;
-  margin: 0 auto;
-  padding: 0 1em; }
-  @media (max-width: 767px) {
-    .l-container {
-      max-width: 680px; } }
+  max-width: 1080px;
+  margin: 0 auto; }
 
 /*-----------------------
-    Lines
-------------------------*/
-/*-----------------------
-    Columns
+    Columns mobile
 ------------------------*/
 [class*='l-col-'] {
   float: left;
-  padding: 0 1.5em;
   width: 100%;
-  min-height: 1px; }
+  padding: 0 20px; }
 
+/*-----------------------
+    Columns Desktop
+------------------------*/
 @media screen and (min-width: 768px) {
   .l-col-1 {
     width: 8.33333%; }
@@ -863,11 +864,13 @@ a.btn:visited, .comment-respond input.submit {
 /*----------------------
    Intro Home
 -----------------------*/
-.intro-text {
-  color: #FFFFFF;
-  text-align: center;
+.home-intro {
   -webkit-animation: txt-intro-anim 1.5s 1 ease;
           animation: txt-intro-anim 1.5s 1 ease; }
+
+.intro-text {
+  color: #FFFFFF;
+  text-align: center; }
   .intro-text h1 {
     margin: 0 0 .2em;
     color: #61CDF5;

@@ -4,7 +4,7 @@
     <main class="l-col-8" role="main">
         <?php
         while (have_posts()) : the_post();
-            get_template_part( 'template-parts/content', 'excerpt' );
+            get_template_part( 'partials/content', 'excerpt' );
         endwhile;
         ?>
 
