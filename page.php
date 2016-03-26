@@ -10,7 +10,7 @@
         ?>
     </main>
 
-    <aside role="complementary" class="l-col-4 l-pad-2" >
+    <aside role="complementary" class="widgets l-col-4 l-pad-2" >
         <?php get_sidebar(); ?>
     </aside>
 </div>

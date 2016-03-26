@@ -823,12 +823,12 @@ a {
 /*----------------------
    Widgets style
 -----------------------*/
-.widget {
+.widgets .widget {
   background: #f5f5f5;
   margin-bottom: 1em;
   padding: 1em; }
 
-.widgettitle {
+.widgets .widgettitle {
   text-align: center;
   margin-top: 0; }
 
