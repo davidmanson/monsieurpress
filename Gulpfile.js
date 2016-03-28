@@ -7,6 +7,8 @@ var imagemin = require('gulp-imagemin');
 var pngquant = require('imagemin-pngquant');
 var uglify = require('gulp-uglify');
 var livereload = require('gulp-livereload');
+var nodebourbon = require('node-bourbon');
+var nodeneat = require('node-neat');
 var duration = require('gulp-duration')
 var plumber = require('gulp-plumber');
 
@@ -21,7 +23,9 @@ var plumber = require('gulp-plumber');
 gulp.task('styles', function() {
     gulp.src('scss/**/*.scss')
         .pipe(plumber())
-        .pipe(sass())
+        .pipe(sass({
+            includePaths: nodeneat.includePaths
+        }))
         .pipe(autoprefixer())
         .pipe(gulp.dest('./'))
         .pipe(duration('Compiling scss'))

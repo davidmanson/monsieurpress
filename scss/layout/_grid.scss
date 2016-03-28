@@ -4,6 +4,13 @@
 //*******************************************************
 
 /*-----------------------
+    Libs
+------------------------*/
+@import "bourbon";
+@import "neat";
+
+
+/*-----------------------
     Config
 ------------------------*/
 $gutter: 20px;
@@ -20,28 +27,18 @@ $container: 1080px;
     Container
 ------------------------*/
 .l-container {
-    max-width: $container;
-    margin: 0 auto;
-    @extend %clearfix;
+    @include outer-container($container);
+    width: 80%;
 }
 
-
-/*-----------------------
-    Columns mobile
-------------------------*/
-[class*='l-col-'] {
-    float: left;
-    width: 100%;
-    padding: 0 $gutter;
-}
 
 /*-----------------------
     Columns Desktop
 ------------------------*/
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 980px) {
     @for $i from 1 through 12 {
         .l-col-#{$i} {
-            width: 100% / 12 * $i;
+            @include span-columns($i);
         }
     }
 }
