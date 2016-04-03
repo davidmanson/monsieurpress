@@ -81,6 +81,7 @@
         }
         /* The sub menu */
         .sub-menu {
+            z-index: 100;
             position: absolute;
             right: 0;
             padding: 0;

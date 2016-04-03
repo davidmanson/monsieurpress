@@ -471,6 +471,7 @@ a {
     .site-nav .current-menu-ancestor > a {
       color: #00749A; }
     .site-nav .sub-menu {
+      z-index: 100;
       position: absolute;
       right: 0;
       padding: 0;
