@@ -510,18 +510,6 @@ a {
 .l-white {
   background: #FFFFFF; }
 
-/*----------------------
-   Specific section
------------------------*/
-.marketing-theme .l-col-4 {
-  margin-top: 2em;
-  margin-bottom: 2em; }
-
-.marketing-theme h3 {
-  text-transform: uppercase;
-  font-weight: bold;
-  color: #00749A; }
-
 /*-----------------------
     Libs
 ------------------------*/
@@ -813,15 +801,6 @@ html {
   /* Above WP toolbar. */ }
 
 /*----------------------
-   Section title
------------------------*/
-.section-title {
-  text-align: center;
-  font: 200 48px/1.5em "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #393d40;
-  margin: .5em 0 .7em 0; }
-
-/*----------------------
    Burger button
 -----------------------*/
 .menu-icon {
@@ -915,50 +894,6 @@ a.btn:visited, .comment-respond input.submit {
   .btn:active,
   a.btn:active:visited, .comment-respond input.submit:active {
     top: 1px; }
-
-/*----------------------
-   Intro Home
------------------------*/
-.home-intro {
-  -webkit-animation: txt-intro-anim 1.5s 1 ease;
-          animation: txt-intro-anim 1.5s 1 ease; }
-
-.intro-text {
-  color: #FFFFFF;
-  text-align: center; }
-  .intro-text h1 {
-    margin: 0 0 .2em;
-    color: #00749A;
-    font: 300 50px/1.3em "Helvetica Neue", Helvetica, Arial, sans-serif; }
-    @media only screen and (min-width: 1030px) {
-      .intro-text h1 {
-        font-size: 66px; } }
-  .intro-text h2 {
-    margin-top: 0;
-    font: 500 25px/1.4em "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #555555; }
-
-/*----------------------
-   Intro animation
------------------------*/
-@-webkit-keyframes txt-intro-anim {
-  0% {
-    -webkit-transform: translate(0, 40px);
-            transform: translate(0, 40px);
-    opacity: 0; }
-  100% {
-    -webkit-transform: translate(0px, 0px);
-            transform: translate(0px, 0px);
-    opacity: 1; } }
-@keyframes txt-intro-anim {
-  0% {
-    -webkit-transform: translate(0, 40px);
-            transform: translate(0, 40px);
-    opacity: 0; }
-  100% {
-    -webkit-transform: translate(0px, 0px);
-            transform: translate(0px, 0px);
-    opacity: 1; } }
 
 /*----------------------
    Pagination style

@@ -8,18 +8,3 @@
 .l-white {
     background: $white;
 }
-
-/*----------------------
-   Specific section
------------------------*/
-.marketing-theme {
-    .l-col-4 {
-        margin-top: 2em;
-        margin-bottom: 2em;
-    }
-    h3 {
-        text-transform: uppercase;
-        font-weight: bold;
-        color: $main-color;
-    }
-}
