@@ -475,12 +475,9 @@ a {
       position: absolute;
       right: 0;
       padding: 0;
-      background: #393d40; }
+      background: #f5f5f5; }
       .site-nav .sub-menu > li {
         float: none; }
-      .site-nav .sub-menu > li > a:hover,
-      .site-nav .sub-menu > li > a:focus {
-        background: #393d40; }
   /*----------------------
        Sub menu system
     -----------------------*/

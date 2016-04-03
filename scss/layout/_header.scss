@@ -85,14 +85,9 @@
             position: absolute;
             right: 0;
             padding: 0;
-            background: $dark-gray;
+            background: $light-gray;
             > li {
                 float: none;
-            }
-
-            > li > a:hover,
-            > li > a:focus{
-                background: $dark-gray;
             }
         }
     }
