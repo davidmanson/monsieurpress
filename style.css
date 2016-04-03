@@ -822,7 +822,7 @@ html {
   display: block;
   width: 22px;
   height: 2px;
-  background-color: #FFFFFF;
+  background-color: #393d40;
   -webkit-transition: background 0.5s;
   transition: background 0.5s; }
   .menu-icon > span:before, .menu-icon > span:after {
@@ -835,7 +835,7 @@ html {
     display: block;
     width: 22px;
     height: 2px;
-    background-color: #FFFFFF;
+    background-color: #393d40;
     -webkit-transition: -webkit-transform 0.5s;
     transition: -webkit-transform 0.5s;
     transition: transform 0.5s;

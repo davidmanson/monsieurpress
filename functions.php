@@ -115,15 +115,9 @@ function theme_filters(){
 function front_assets_load() {
     if (is_admin()) return;
 
-    /* deregister jQuery in header & register it in footer & deregister wp-embed */
-    wp_deregister_script( 'wp-embed' );
-    wp_deregister_script( 'jquery' );
-    wp_deregister_script( 'jquery-migrate');
-    wp_register_script( 'jquery', includes_url( '/js/jquery/jquery.js' ), false, NULL, true );
-
     /* Enqueue theme script & style */
     wp_enqueue_style( 'mrpress-stylesheet', get_stylesheet_uri()  );
-    wp_enqueue_script( 'site-js', get_template_directory_uri() . '/js/dist/scripts.js', array(), '20160207', true);
+    wp_enqueue_script( 'mrpress-js', get_template_directory_uri() . '/js/dist/scripts.js', array('jquery'), '20160207', true);
 
     /* Enqueue comment-reply script if needed */
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
