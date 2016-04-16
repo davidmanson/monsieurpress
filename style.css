@@ -10,21 +10,22 @@ License URI: http://www.wtfpl.net/
 Text Domain: mrpress
 Tags: light, right-sidebar, responsive-layout, custom-menu, sticky-post
 */
-.clearfix:before, .pagination:before, .clearfix:after, .pagination:after {
-  content: " ";
-  display: table; }
+/*-----------------------
+    Libs
+------------------------*/
+html {
+  box-sizing: border-box; }
 
-.clearfix:after, .pagination:after {
-  clear: both; }
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+.clearfix::after, .pagination::after {
+  clear: both;
+  content: "";
+  display: table; }
 
 .text-center {
   text-align: center; }
-
-.text-large {
-  font-size: 20px;
-  color: #393d40;
-  font-weight: 200;
-  line-height: 1.8em; }
 
 /*! normalize.css v4.0.0 | MIT License | github.com/necolas/normalize.css */
 /**
@@ -382,36 +383,66 @@ textarea {
   -webkit-appearance: none; }
 
 /*-----------------------
-    General styles
+     Setting up
 ------------------------*/
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 100%;
-  line-height: 1.5;
+  line-height: 1.6;
   color: #3A3A3A;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
 /*-----------------------
+    General styles
+------------------------*/
+body {
+  font-size: 1rem; }
+
+h4 {
+  font-size: 1.41421rem; }
+
+h3 {
+  font-size: 1.41421rem; }
+
+h2 {
+  font-size: 1.99999rem; }
+
+h1 {
+  font-size: 2.82841rem; }
+
+small, .font_small {
+  font-size: 0.70711rem; }
+
+ul {
+  padding: 0 0 1.75em 1.25em; }
+
+/*-----------------------
     Link Styles
 ------------------------*/
-a {
-  color: #00749A; }
-  a:visited {
-    color: #00749A; }
-  a:hover, a:focus, a:active {
-    text-decoration: underline; }
-  a:focus {
-    outline: thin dotted; }
-  a:hover, a:active {
-    outline: 0; }
+a,
+a:visited,
+a:hover,
+a:focus,
+a:active {
+  color: #00749A;
+  text-decoration: none;
+  outline: 0; }
 
+a:hover {
+  color: #00232e;
+  text-decoration: underline; }
+
+/*----------------------
+   Setup
+-----------------------*/
 /*----------------------
    Header wrapper
 -----------------------*/
 .header {
   background-color: #FFFFFF;
-  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15); }
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
+  position: relative; }
 
 /*----------------------
    Logo
@@ -419,76 +450,100 @@ a {
 .site-logo img {
   float: left;
   display: block;
-  height: 40px;
   width: auto;
-  margin-top: 10px; }
+  height: 40px;
+  margin: 10px 0; }
 
-/*----------------------
-   Navigation basic
------------------------*/
+/*-----------------------
+    Mobile menu layout
+-------------------------*/
 .site-nav {
-  display: none;
-  clear: left; }
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  z-index: 100;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  background: white; }
   .no-js .site-nav,
   .is-menu-on .site-nav {
-    display: block; }
-  .site-nav ul {
-    list-style: none;
-    padding-left: 1em; }
-  .site-nav li a {
-    font-size: 14px;
-    display: block;
-    color: #aebdc1;
-    text-decoration: none;
-    padding: 0.75em;
-    white-space: nowrap; }
+    visibility: visible;
+    opacity: 1; }
 
 /*----------------------
-   Navigation desktop
+    Mobile menu style
 -----------------------*/
+.site-nav ul {
+  list-style: none;
+  padding-left: 1em; }
+
+.site-nav li > a {
+  color: #aebdc1;
+  font-weight: bold;
+  display: block;
+  padding: 0.75em;
+  white-space: nowrap; }
+  .site-nav li > a:hover {
+    text-decoration: none;
+    color: #00749A; }
+
+/*-----------------------------
+   Navigation desktop layout
+------------------------------*/
 @media only screen and (min-width: 768px) {
   .menu-icon {
     display: none; }
   .site-nav {
-    clear: none;
-    float: right;
-    display: block !important;
-    font-weight: bold;
-    /* highlight current page */
-    /* The sub menu */ }
-    .site-nav ul {
-      margin-top: 0; }
-    .site-nav li {
-      float: left;
-      position: relative; }
-      .site-nav li a {
-        padding: 20px 1.5em; }
-        .site-nav li a:hover, .site-nav li a:focus {
-          color: #393d40; }
-    .site-nav li.current-menu-item > a,
-    .site-nav li.current_page_item > a,
-    .site-nav li.current_page_ancestor > a,
-    .site-nav .current-menu-ancestor > a {
-      color: #00749A; }
-    .site-nav .sub-menu {
-      z-index: 100;
-      position: absolute;
-      right: 0;
-      padding: 0;
-      background: #f5f5f5; }
-      .site-nav .sub-menu > li {
-        float: none; }
-  /*----------------------
-       Sub menu system
-    -----------------------*/
-  .site-nav .menu-item-has-children .sub-menu {
-    opacity: 0;
-    visibility: hidden;
-    -webkit-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out; }
-  .site-nav .menu-item-has-children:hover .sub-menu {
+    visibility: visible;
     opacity: 1;
-    visibility: visible; } }
+    position: static;
+    width: auto;
+    float: right; } }
+
+/*---------------------------
+   Navigation desktop style
+----------------------------*/
+@media only screen and (min-width: 768px) {
+  .site-nav ul {
+    margin-top: 0; }
+  .site-nav li {
+    float: left;
+    position: relative; }
+  .site-nav li a {
+    padding: 0 1em;
+    line-height: 60px; }
+  .site-nav li.current-menu-item > a,
+  .site-nav li.current_page_item > a,
+  .site-nav li.current_page_ancestor > a,
+  .site-nav .current-menu-ancestor > a {
+    color: #00749A; } }
+
+/*----------------------
+   Sub menu
+-----------------------*/
+@media only screen and (min-width: 768px) {
+  .site-nav .sub-menu {
+    z-index: 100;
+    position: absolute;
+    right: 0;
+    padding: 0;
+    background: #f5f5f5; } }
+
+/*----------------------
+   Sub menu
+-----------------------*/
+@media only screen and (min-width: 768px) {
+  .site-nav .menu-item-has-children .sub-menu {
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+  .site-nav .menu-item-has-children:hover .sub-menu {
+    visibility: visible;
+    opacity: 1; } }
 
 /*----------------------
    Footer style
@@ -506,15 +561,6 @@ a {
 
 .l-white {
   background: #FFFFFF; }
-
-/*-----------------------
-    Libs
-------------------------*/
-html {
-  box-sizing: border-box; }
-
-*, *::after, *::before {
-  box-sizing: inherit; }
 
 /*-----------------------
     Config
@@ -855,13 +901,14 @@ html {
    Widgets style
 -----------------------*/
 .widgets .widget {
-  background: #f5f5f5;
-  margin-bottom: 1em;
-  padding: 1em; }
+  border-top: 3px solid #393d40;
+  margin-bottom: 1em; }
 
 .widgets .widgettitle {
-  text-align: center;
-  margin-top: 0; }
+  margin: .5em 0;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase; }
 
 /*----------------------
     Buttons
@@ -869,7 +916,10 @@ html {
 .btn,
 input.btn,
 a.btn,
-a.btn:visited, .comment-respond input.submit {
+a.btn:visited, .comment-respond input.submit, input[type="submit"],
+.btn:visited,
+.comment-respond input.submit:visited,
+input[type="submit"]:visited {
   display: inline-block;
   text-decoration: none;
   color: #FFFFFF;
@@ -882,14 +932,23 @@ a.btn:visited, .comment-respond input.submit {
   -webkit-transition: all 0.14s ease-in-out;
   transition: all 0.14s ease-in-out; }
   .btn:hover,
-  a.btn:hover:visited, .comment-respond input.submit:hover, .btn:focus,
-  a.btn:focus:visited, .comment-respond input.submit:focus {
+  a.btn:hover:visited, .comment-respond input.submit:hover, input[type="submit"]:hover, .btn:focus,
+  a.btn:focus:visited, .comment-respond input.submit:focus, input[type="submit"]:focus,
+  .btn:visited:hover,
+  .comment-respond input.submit:visited:hover,
+  input[type="submit"]:visited:hover,
+  .btn:visited:focus,
+  .comment-respond input.submit:visited:focus,
+  input[type="submit"]:visited:focus {
     color: #FFFFFF;
     text-decoration: none;
     outline: none;
     background: #00465c; }
   .btn:active,
-  a.btn:active:visited, .comment-respond input.submit:active {
+  a.btn:active:visited, .comment-respond input.submit:active, input[type="submit"]:active,
+  .btn:visited:active,
+  .comment-respond input.submit:visited:active,
+  input[type="submit"]:visited:active {
     top: 1px; }
 
 /*----------------------
@@ -911,25 +970,10 @@ a.btn:visited, .comment-respond input.submit {
     color: #FFFFFF; }
 
 /*----------------------
-   Post title
------------------------*/
-.single .entry-header {
-  padding: 0 0 1.5em 0;
-  border-bottom: 1px solid #f5f5f5; }
-
-.entry-title {
-  font-size: 42px; }
-
-.entry-meta {
-  color: #aebdc1;
-  font-style: italic;
-  margin: 0; }
-
-/*----------------------
    Post content
 -----------------------*/
-.post {
-  margin: 2em 0; }
+.hentry {
+  margin: 0 0 1.5em; }
 
 .entry-content, .wp-editor {
   padding: 1.5em 0; }
@@ -972,8 +1016,6 @@ a.btn:visited, .comment-respond input.submit {
    Sticky post
 -----------------------*/
 .sticky {
-  padding: 1em;
-  border: 1px solid #00749A;
   background: #f5f5f5; }
 
 /*----------------------
@@ -1093,10 +1135,6 @@ a.btn:visited, .comment-respond input.submit {
 /*
  * Comment response
  */
-.comment-respond input.submit {
-  color: #00749A;
-  border-color: #00749A; }
-
 /*
  * from underscores.me starter theme
  * TODO : adapt & make minimal design

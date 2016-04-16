@@ -13,7 +13,6 @@ var duration = require('gulp-duration')
 var plumber = require('gulp-plumber');
 
 
-
 /*-------------------------------------------
  * Sass compilation
  * - compile Scss file to CSS

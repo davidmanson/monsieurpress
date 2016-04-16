@@ -1,9 +1,19 @@
 /*----------------------
+   Setup
+-----------------------*/
+$header-height: 60px;
+$logo-height: 40px;
+$break-point: 768px;
+$margin-logo: ($header-height - $logo-height)/2;
+
+
+/*----------------------
    Header wrapper
 -----------------------*/
 .header {
     background-color: $white;
     box-shadow: 0px 1px 2px rgba(0,0,0,.15);
+    position: relative;
 }
 
 
@@ -13,98 +23,128 @@
 .site-logo img {
     float: left;
     display: block;
-    height: 40px;
     width: auto;
-    margin-top: 10px;
+    height: $logo-height;
+    margin: $margin-logo 0;
 }
 
 
-/*----------------------
-   Navigation basic
------------------------*/
+
+/*-----------------------
+    Mobile menu layout
+-------------------------*/
 .site-nav {
-    display: none;
-    clear: left;
+    @include unvisible();
+
+    position: absolute;
+    z-index: 100;
+    top: 100%;
+    left: 0;
+
+    width: 100%;
+    transition: all .2s ease-in-out;
+
+    background: white;
     .no-js &,
     .is-menu-on & {
-        display: block;
+        @include visible();
     }
+}
+
+
+
+/*----------------------
+    Mobile menu style
+-----------------------*/
+.site-nav {
     ul {
         list-style: none;
         padding-left: 1em;
     }
-    li {
-        a {
-            font-size: 14px;
-            display: block;
-            color: $gray;
+    li > a {
+        color: $gray;
+        font-weight: bold;
+        display: block;
+        padding: 0.75em;
+        white-space: nowrap;
+        &:hover {
             text-decoration: none;
-            padding: 0.75em;
-            white-space: nowrap;
+            color: $main-color;
         }
     }
 }
 
 
-/*----------------------
-   Navigation desktop
------------------------*/
-@media only screen and (min-width: 768px) {
+
+/*-----------------------------
+   Navigation desktop layout
+------------------------------*/
+@media only screen and (min-width: $break-point) {
     .menu-icon {
         display: none;
     }
     .site-nav {
-        clear: none;
+        @include visible();
+        position: static;
+        width: auto;
         float: right;
-        display: block !important;
-        font-weight: bold;
+    }
+}
+
+
+
+/*---------------------------
+   Navigation desktop style
+----------------------------*/
+@media only screen and (min-width: $break-point) {
+    .site-nav {
         ul {
             margin-top: 0;
         }
         li {
             float: left;
             position: relative;
-            a {
-                padding: 20px 1.5em;
-                &:hover,
-                &:focus {
-                    color: $dark-gray;
-                }
-            }
         }
-        /* highlight current page */
+        li a {
+            padding: 0 1em;
+            line-height: $header-height;
+        }
         li.current-menu-item > a,
         li.current_page_item > a,
         li.current_page_ancestor > a,
         .current-menu-ancestor > a {
             color: $main-color;
         }
-        /* The sub menu */
-        .sub-menu {
-            z-index: 100;
-            position: absolute;
-            right: 0;
-            padding: 0;
-            background: $light-gray;
-            > li {
-                float: none;
-            }
-        }
     }
+}
 
 
-    /*----------------------
-       Sub menu system
-    -----------------------*/
+/*----------------------
+   Sub menu
+-----------------------*/
+@media only screen and (min-width: $break-point) {
+    .site-nav .sub-menu {
+        z-index: 100;
+        position: absolute;
+        right: 0;
+        padding: 0;
+        background: $light-gray;
+    }
+}
+
+
+/*----------------------
+   Sub menu
+-----------------------*/
+@media only screen and (min-width: $break-point) {
+
     .site-nav .menu-item-has-children {
         .sub-menu {
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.2s ease-in-out;
+            @include unvisible();
+            transition: all 0.3s ease-in-out;
         }
         &:hover .sub-menu {
-            opacity: 1;
-            visibility: visible;
+            @include visible();
         }
     }
 }

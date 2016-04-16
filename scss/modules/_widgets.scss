@@ -3,13 +3,14 @@
 -----------------------*/
 .widgets{
     .widget{
-        background: $light-gray;
+        border-top: 3px solid $dark-gray;
         margin-bottom: 1em;
-        padding: 1em;
     }
 
     .widgettitle{
-        text-align: center;
-        margin-top: 0;
+        margin: .5em 0;
+        font-size: ms(0);
+        font-weight: bold;
+        text-transform: uppercase;
     }
 }

@@ -2,40 +2,52 @@
 // TYPOGRAPHY FILE
 // Here is the global typography styles
 //*******************************************************
+@import 'node_modules/modularscale-sass/stylesheets/_modular-scale.scss';
+
 
 
 /*-----------------------
-    General styles
+     Setting up
 ------------------------*/
+$ms-base: 1rem;
+$ms-ratio: $augmented-fourth;
+
 body {
 	font-family: $primary-font;
 	font-size: 100%;
-	line-height: 1.5;
+	line-height: 1.6;
 	color: $text-color;
   	-webkit-font-smoothing: antialiased;
   	-moz-osx-font-smoothing: grayscale;
 }
 
 
+
+/*-----------------------
+    General styles
+------------------------*/
+body{ font-size: ms(0); }
+  h4{ font-size: ms(1); }
+  h3{ font-size: ms(1); }
+  h2{ font-size: ms(2); }
+  h1{ font-size: ms(3); }
+  small, .font_small {font-size: ms(-1);}
+ul {padding: 0 0 1.75em 1.25em}
+
+
 /*-----------------------
     Link Styles
 ------------------------*/
-a {
+a,
+a:visited,
+a:hover,
+a:focus,
+a:active {
 	color: $main-color;
-
-	&:visited {
-		color: $main-color;
-	}
-	&:hover,
-	&:focus,
-	&:active {
-		text-decoration: underline;
-	}
-	&:focus {
-		outline: thin dotted;
-	}
-	&:hover,
-	&:active {
-		outline: 0;
-	}
+	text-decoration: none;
+	outline: 0;
+}
+a:hover {
+	color: shade($main-color, 70%);
+	text-decoration: underline;
 }

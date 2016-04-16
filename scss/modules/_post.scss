@@ -1,25 +1,12 @@
 /*----------------------
-   Post title
------------------------*/
-.single .entry-header{
-    padding: 0 0 1.5em 0;
-    border-bottom: 1px solid $light-gray;
-}
-.entry-title{
-    font-size: 42px;
-}
-.entry-meta {
-	color: $gray;
-	font-style: italic;
-	margin: 0;
-}
-
-
-/*----------------------
    Post content
 -----------------------*/
-.post{
-    margin: 2em 0;
+.hentry {
+	margin: 0 0 1.5em;
+}
+
+.entry-header{
+
 }
 
 .entry-content{
@@ -80,8 +67,6 @@
    Sticky post
 -----------------------*/
 .sticky{
-    padding: 1em;
-    border: 1px solid $main-color;
     background: $light-gray;
 }
 

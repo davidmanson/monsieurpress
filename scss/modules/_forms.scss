@@ -18,4 +18,5 @@ textarea {
 
 input[type="submit"] {
     margin-top: .85rem;
+    @extend %btn;
 }

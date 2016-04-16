@@ -1,7 +1,8 @@
 /*----------------------
     Buttons
 -----------------------*/
-%btn {
+%btn,
+%btn:visited {
     display: inline-block;
     text-decoration: none;
     color: $white;
