@@ -67,7 +67,8 @@
    Sticky post
 -----------------------*/
 .sticky{
-    background: $light-gray;
+    border-top: 2px solid $light-gray;
+	border-bottom: 2px solid $light-gray;
 }
 
 

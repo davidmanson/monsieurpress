@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <div class="l-container">
-    <main class="l-col-8" role="main">
+    <main role="main" class="l-col-8 l-pad-2">
         <?php
         while (have_posts()) : the_post();
             get_template_part( 'partials/content', 'excerpt' );

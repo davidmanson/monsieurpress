@@ -13,12 +13,6 @@ Tags: light, right-sidebar, responsive-layout, custom-menu, sticky-post
 /*-----------------------
     Libs
 ------------------------*/
-html {
-  box-sizing: border-box; }
-
-*, *::after, *::before {
-  box-sizing: inherit; }
-
 .clearfix::after, .pagination::after {
   clear: both;
   content: "";
@@ -386,7 +380,7 @@ textarea {
      Setting up
 ------------------------*/
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 100%;
   line-height: 1.6;
   color: #3A3A3A;
@@ -400,22 +394,27 @@ body {
   font-size: 1rem; }
 
 h4 {
-  font-size: 1.41421rem; }
+  font-size: 1.414rem; }
 
 h3 {
-  font-size: 1.41421rem; }
+  font-size: 1.414rem; }
 
 h2 {
-  font-size: 1.99999rem; }
+  font-size: 1.9994rem; }
 
 h1 {
-  font-size: 2.82841rem; }
+  font-size: 2.82715rem; }
 
 small, .font_small {
-  font-size: 0.70711rem; }
+  font-size: 0.70721rem; }
 
 ul {
   padding: 0 0 1.75em 1.25em; }
+
+h1, h2, h3, h4 {
+  font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #00749A;
+  font-weight: 400; }
 
 /*-----------------------
     Link Styles
@@ -441,7 +440,7 @@ a:hover {
 -----------------------*/
 .header {
   background-color: #FFFFFF;
-  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
+  border-bottom: 1px solid #f5f5f5;
   position: relative; }
 
 /*----------------------
@@ -565,6 +564,12 @@ a:hover {
 /*-----------------------
     Config
 ------------------------*/
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
 /*-----------------------
     Global
 ------------------------*/
@@ -575,7 +580,7 @@ a:hover {
     Container
 ------------------------*/
 .l-container {
-  max-width: 1080px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   width: 80%; }
@@ -591,84 +596,84 @@ a:hover {
   .l-col-1 {
     float: left;
     display: block;
-    margin-right: 2.35765%;
-    width: 6.17215%; }
+    margin-right: 3.57869%;
+    width: 5.05287%; }
     .l-col-1:last-child {
       margin-right: 0; }
   .l-col-2 {
     float: left;
     display: block;
-    margin-right: 2.35765%;
-    width: 14.70196%; }
+    margin-right: 3.57869%;
+    width: 13.68443%; }
     .l-col-2:last-child {
       margin-right: 0; }
   .l-col-3 {
     float: left;
     display: block;
-    margin-right: 2.35765%;
-    width: 23.23176%; }
+    margin-right: 3.57869%;
+    width: 22.31598%; }
     .l-col-3:last-child {
       margin-right: 0; }
   .l-col-4 {
     float: left;
     display: block;
-    margin-right: 2.35765%;
-    width: 31.76157%; }
+    margin-right: 3.57869%;
+    width: 30.94754%; }
     .l-col-4:last-child {
       margin-right: 0; }
   .l-col-5 {
     float: left;
     display: block;
-    margin-right: 2.35765%;
-    width: 40.29137%; }
+    margin-right: 3.57869%;
+    width: 39.5791%; }
     .l-col-5:last-child {
       margin-right: 0; }
   .l-col-6 {
     float: left;
     display: block;
-    margin-right: 2.35765%;
-    width: 48.82117%; }
+    margin-right: 3.57869%;
+    width: 48.21066%; }
     .l-col-6:last-child {
       margin-right: 0; }
   .l-col-7 {
     float: left;
     display: block;
-    margin-right: 2.35765%;
-    width: 57.35098%; }
+    margin-right: 3.57869%;
+    width: 56.84221%; }
     .l-col-7:last-child {
       margin-right: 0; }
   .l-col-8 {
     float: left;
     display: block;
-    margin-right: 2.35765%;
-    width: 65.88078%; }
+    margin-right: 3.57869%;
+    width: 65.47377%; }
     .l-col-8:last-child {
       margin-right: 0; }
   .l-col-9 {
     float: left;
     display: block;
-    margin-right: 2.35765%;
-    width: 74.41059%; }
+    margin-right: 3.57869%;
+    width: 74.10533%; }
     .l-col-9:last-child {
       margin-right: 0; }
   .l-col-10 {
     float: left;
     display: block;
-    margin-right: 2.35765%;
-    width: 82.94039%; }
+    margin-right: 3.57869%;
+    width: 82.73689%; }
     .l-col-10:last-child {
       margin-right: 0; }
   .l-col-11 {
     float: left;
     display: block;
-    margin-right: 2.35765%;
-    width: 91.4702%; }
+    margin-right: 3.57869%;
+    width: 91.36844%; }
     .l-col-11:last-child {
       margin-right: 0; }
   .l-col-12 {
     float: left;
     display: block;
-    margin-right: 2.35765%;
+    margin-right: 3.57869%;
     width: 100%; }
     .l-col-12:last-child {
       margin-right: 0; } }
@@ -676,7 +681,7 @@ a:hover {
 /*-------------------------------
     Pushers
 --------------------------------*/
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 980px) {
   .l-col-push-1 {
     margin-left: 8.33333%; }
   .l-col-push-2 {
@@ -906,7 +911,7 @@ a:hover {
 
 .widgets .widgettitle {
   margin: .5em 0;
-  font-size: 1rem;
+  font-size: ms(0);
   font-weight: bold;
   text-transform: uppercase; }
 
@@ -1016,7 +1021,8 @@ input[type="submit"]:visited {
    Sticky post
 -----------------------*/
 .sticky {
-  background: #f5f5f5; }
+  border-top: 2px solid #f5f5f5;
+  border-bottom: 2px solid #f5f5f5; }
 
 /*----------------------
    Admin Editor

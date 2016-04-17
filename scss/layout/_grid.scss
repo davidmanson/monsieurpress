@@ -7,8 +7,12 @@
 /*-----------------------
     Config
 ------------------------*/
-$gutter: 20px;
-$container: 1080px;
+@import "neat/neat-helpers";
+$gutter: 3em;
+$max-width: 1200px;
+$desktop: new-breakpoint(min-width 980px);
+@import "neat";
+
 
 
 /*-----------------------
@@ -21,7 +25,7 @@ $container: 1080px;
     Container
 ------------------------*/
 .l-container {
-    @include outer-container($container);
+    @include outer-container();
     width: 80%;
 }
 
@@ -29,7 +33,7 @@ $container: 1080px;
 /*-----------------------
     Columns Desktop
 ------------------------*/
-@media screen and (min-width: 980px) {
+@include media($desktop) {
     @for $i from 1 through 12 {
         .l-col-#{$i} {
             @include span-columns($i);
@@ -41,7 +45,7 @@ $container: 1080px;
 /*-------------------------------
     Pushers
 --------------------------------*/
-@media screen and (min-width: 768px) {
+@include media($desktop) {
     @for $i from 1 through 10 {
         .l-col-push-#{$i} {
             margin-left: 100% / 12 * $i;

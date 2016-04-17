@@ -2,15 +2,13 @@
 // TYPOGRAPHY FILE
 // Here is the global typography styles
 //*******************************************************
-@import 'node_modules/modularscale-sass/stylesheets/_modular-scale.scss';
-
 
 
 /*-----------------------
      Setting up
 ------------------------*/
-$ms-base: 1rem;
-$ms-ratio: $augmented-fourth;
+$modular-scale-base: 1rem;
+$modular-scale-ratio: $augmented-fourth;
 
 body {
 	font-family: $primary-font;
@@ -26,13 +24,20 @@ body {
 /*-----------------------
     General styles
 ------------------------*/
-body{ font-size: ms(0); }
-  h4{ font-size: ms(1); }
-  h3{ font-size: ms(1); }
-  h2{ font-size: ms(2); }
-  h1{ font-size: ms(3); }
-  small, .font_small {font-size: ms(-1);}
-ul {padding: 0 0 1.75em 1.25em}
+body{ font-size: modular-scale(0); }
+  h4{ font-size: modular-scale(1); }
+  h3{ font-size: modular-scale(1); }
+  h2{ font-size: modular-scale(2); }
+  h1{ font-size: modular-scale(3); }
+  small, .font_small {font-size: modular-scale(-1);}
+  ul {padding: 0 0 1.75em 1.25em}
+
+h1, h2, h3, h4{
+	font-family: $secondary-font;
+	color: $main-color;
+	font-weight: 400;
+}
+
 
 
 /*-----------------------

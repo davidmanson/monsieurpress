@@ -127,3 +127,27 @@ function front_assets_load() {
 	}
 }
 add_action('wp_enqueue_scripts', 'front_assets_load');
+
+
+
+/************************************
+ Async Font Load
+*************************************/
+function add_load_web_font(){
+?>
+<script type="text/javascript">
+  WebFontConfig = {
+    google: { families: [ 'Roboto:400,700,400italic,300:latin', 'Roboto+Slab:400,700:latin' ] }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })();
+</script>
+<?php
+}
+add_action( 'wp_head', 'add_load_web_font');
