@@ -7,6 +7,8 @@ var imagemin = require('gulp-imagemin');
 var pngquant = require('imagemin-pngquant');
 var uglify = require('gulp-uglify');
 var livereload = require('gulp-livereload');
+var wpPot = require('gulp-wp-pot');
+var sort = require('gulp-sort');
 var duration = require('gulp-duration')
 var plumber = require('gulp-plumber');
 var eyeglass = require("eyeglass");
@@ -66,6 +68,25 @@ gulp.task('compress', function() {
     gulp.src('js/src/*.js')
         .pipe(uglify())
         .pipe(gulp.dest('js/dist/'));
+});
+
+
+
+/*-------------------------------------------
+ * Make pot file
+ * - Prepare the theme for i18n
+ -------------------------------------------*/
+gulp.task('pot', function () {
+    return gulp.src('./**/*.php')
+        .pipe(sort())
+        .pipe(wpPot( {
+            domain: 'mrpress',
+            destFile:'mrpress.pot',
+            package: 'mrpress',
+            lastTranslator: 'John Doe <mail@example.com>',
+            team: 'Team Team <mail@example.com>'
+        } ))
+        .pipe(gulp.dest('languages'));
 });
 
 

@@ -7,7 +7,7 @@
                 <?php _e('Oups, this page doesn\'t exist...', 'mrpress'); ?>
             </p>
             <div class="text-center">
-                <a class="btn" href="<?php echo home_url(); ?>">Home</a>
+                <a class="btn" href="<?php echo home_url(); ?>"><?php _e('Home', 'mrpress'); ?></a>
             </div>
         </div>
     </div>
