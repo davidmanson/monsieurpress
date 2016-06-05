@@ -13,6 +13,7 @@
 	</header>
 
 	<div class="entry-content">
+		<?php the_post_thumbnail( 'monsieurpress-small' ); ?>
 		<?php the_excerpt(); ?>
 	</div>
 </article>

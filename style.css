@@ -1006,6 +1006,8 @@ input[type="submit"]:visited {
   .entry-content .size-thumbnail, .wp-editor .size-thumbnail {
     max-width: 100%;
     height: auto; }
+  .entry-content .wp-post-image, .wp-editor .wp-post-image {
+    width: 100%; }
   .entry-content pre, .wp-editor pre {
     background: #f5f5f5;
     padding: 1.5em;
