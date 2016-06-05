@@ -1,14 +1,6 @@
 /*----------------------
    Post content
 -----------------------*/
-.hentry {
-	margin: 0 0 1.5em;
-}
-
-.entry-header{
-
-}
-
 .entry-content{
     padding: 1.5em 0;
 
@@ -24,36 +16,15 @@
         color: $gray;
     }
 
-    dd {
-        margin-left: 0;
-        font-size: 0.9em;
-        color: #787878;
-        margin-bottom: 1.5em;
-    }
-
     img {
         margin: 0 0 1.5em 0;
         max-width: 100%;
         height: auto;
     }
 
-    .size-auto,
-    .size-full,
-    .size-large,
-    .size-medium,
-    .size-thumbnail {
-        max-width: 100%;
-        height: auto;
-    }
-
-	.wp-post-image{
-		width: 100%;
-	}
-
     pre {
         background: $light-gray;
         padding: 1.5em;
-        font-size: 16px;
         margin: 0 0 1.5em;
         border-radius: 3px;
         overflow-x: scroll;
@@ -63,6 +34,14 @@
         list-style: disc;
         padding-left: 2em;
     }
+
+	dt{
+		font-weight: bold;
+	}
+
+	dd {
+		margin: 0 1.5em 1.5em;
+	}
 
 }
 
@@ -141,43 +120,21 @@
         width: 100%;
         border: 1px solid $gray;
         margin-bottom: 1.5em;
-
-        caption {
-            margin: 0 0 7px;
-            font-size: 0.75em;
-            color: $gray;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
     }
 
     tr {
         border-bottom: 1px solid $gray;
-
-        &:nth-child(even) {
-            background-color: $light-gray;
-        }
     }
 
     td {
         padding: 7px;
-        border-right: 1px solid $gray;
-
-        &:last-child {
-            border-right: 0;
-        }
     }
 
     th {
-        background-color: $light-gray;
         border-bottom: 1px solid $gray;
-        border-right: 1px solid $gray;
-
-        &:last-child {
-            border-right: 0;
-        }
     }
 }
+
 
 
 /* at this larger size, we can start to align images */

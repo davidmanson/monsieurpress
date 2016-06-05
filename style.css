@@ -977,9 +977,6 @@ input[type="submit"]:visited {
 /*----------------------
    Post content
 -----------------------*/
-.hentry {
-  margin: 0 0 1.5em; }
-
 .entry-content, .wp-editor {
   padding: 1.5em 0; }
   .entry-content p, .wp-editor p {
@@ -990,34 +987,23 @@ input[type="submit"]:visited {
     border-left: 3px solid #00749A;
     font-style: italic;
     color: #aebdc1; }
-  .entry-content dd, .wp-editor dd {
-    margin-left: 0;
-    font-size: 0.9em;
-    color: #787878;
-    margin-bottom: 1.5em; }
   .entry-content img, .wp-editor img {
     margin: 0 0 1.5em 0;
     max-width: 100%;
     height: auto; }
-  .entry-content .size-auto, .wp-editor .size-auto,
-  .entry-content .size-full, .wp-editor .size-full,
-  .entry-content .size-large, .wp-editor .size-large,
-  .entry-content .size-medium, .wp-editor .size-medium,
-  .entry-content .size-thumbnail, .wp-editor .size-thumbnail {
-    max-width: 100%;
-    height: auto; }
-  .entry-content .wp-post-image, .wp-editor .wp-post-image {
-    width: 100%; }
   .entry-content pre, .wp-editor pre {
     background: #f5f5f5;
     padding: 1.5em;
-    font-size: 16px;
     margin: 0 0 1.5em;
     border-radius: 3px;
     overflow-x: scroll; }
   .entry-content ul, .wp-editor ul {
     list-style: disc;
     padding-left: 2em; }
+  .entry-content dt, .wp-editor dt {
+    font-weight: bold; }
+  .entry-content dd, .wp-editor dd {
+    margin: 0 1.5em 1.5em; }
 
 /*----------------------
    Sticky post
@@ -1086,30 +1072,15 @@ input[type="submit"]:visited {
   width: 100%;
   border: 1px solid #aebdc1;
   margin-bottom: 1.5em; }
-  .entry-content table caption, .wp-editor table caption {
-    margin: 0 0 7px;
-    font-size: 0.75em;
-    color: #aebdc1;
-    text-transform: uppercase;
-    letter-spacing: 1px; }
 
 .entry-content tr, .wp-editor tr {
   border-bottom: 1px solid #aebdc1; }
-  .entry-content tr:nth-child(even), .wp-editor tr:nth-child(even) {
-    background-color: #f5f5f5; }
 
 .entry-content td, .wp-editor td {
-  padding: 7px;
-  border-right: 1px solid #aebdc1; }
-  .entry-content td:last-child, .wp-editor td:last-child {
-    border-right: 0; }
+  padding: 7px; }
 
 .entry-content th, .wp-editor th {
-  background-color: #f5f5f5;
-  border-bottom: 1px solid #aebdc1;
-  border-right: 1px solid #aebdc1; }
-  .entry-content th:last-child, .wp-editor th:last-child {
-    border-right: 0; }
+  border-bottom: 1px solid #aebdc1; }
 
 /* at this larger size, we can start to align images */
 @media only screen and (min-width: 481px) {
