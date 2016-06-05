@@ -34,7 +34,7 @@ function remove_ptags_on_images($content){
 // Custom excerpt more
 function custom_excerpt_more($more) {
 	global $post;
-	return '...  <a class="excerpt-read-more" href="'. get_permalink( $post->ID ) . '" title="'. __( 'Read ', 'mrpress' ) . esc_attr( get_the_title( $post->ID ) ).'">'. __( 'Read more &raquo;', 'mrpress' ) .'</a>';
+	return '...  <a class="excerpt-read-more" href="'. get_permalink( $post->ID ) . '" title="'. __( 'Read ', 'monsieurpress' ) . esc_attr( get_the_title( $post->ID ) ).'">'. __( 'Read more &raquo;', 'monsieurpress' ) .'</a>';
 }
 
 

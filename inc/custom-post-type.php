@@ -1,5 +1,5 @@
 <?php
-/* 
+/*
  *  Custom post type
  */
 
@@ -14,12 +14,12 @@ function theme_flush_rewrite_rules() {
  *   Project custom type
  *****************************/
 /*
-function custom_post_project() { 
-    
+function custom_post_project() {
+
 	register_post_type( 'project',
 		array( 'labels' => array(
-			     'name' => __( 'Projects', 'mrpress' ),
-			     'singular_name' => __( 'Project', 'mrpress' ),
+			     'name' => __( 'Projects', 'monsieurpress' ),
+			     'singular_name' => __( 'Project', 'monsieurpress' ),
 			),
 			'public' => true,
             'has_archive' => true,
@@ -27,13 +27,13 @@ function custom_post_project() {
             'hierarchical' => true,
 			'menu_icon' => 'dashicons-desktop',
 			'supports' => array( 'title', 'editor', 'thumbnail', 'custom-fields', 'sticky')
-		) 
+		)
 	);
-	
+
 }
 
 add_action( 'init', 'custom_post_project');
 */
-	
+
 
 ?>

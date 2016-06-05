@@ -32,7 +32,7 @@ function theme_customize_register( $wp_customize ) {
 
     // Section definitions
     $wp_customize->add_section( 'cta_section' , array(
-        'title'      => __( 'CTA buttons', 'mrpress' ),
+        'title'      => __( 'CTA buttons', 'monsieurpress' ),
         'priority'   => 30,
     ) );
 
@@ -40,7 +40,7 @@ function theme_customize_register( $wp_customize ) {
     $wp_customize->add_control(
     	'primary_cta_link_control',
     	array(
-    		'label'    => __( 'Primary CTA Link', 'mrpress' ),
+    		'label'    => __( 'Primary CTA Link', 'monsieurpress' ),
     		'section'  => 'cta_section',
     		'settings' => 'primary_cta_link'
     	)
@@ -50,7 +50,7 @@ function theme_customize_register( $wp_customize ) {
     $wp_customize->add_control(
         'secondary_cta_link_control',
         array(
-            'label'    => __( 'Secondary CTA Link', 'mrpress' ),
+            'label'    => __( 'Secondary CTA Link', 'monsieurpress' ),
             'section'  => 'cta_section',
             'settings' => 'secondary_cta_link'
         )

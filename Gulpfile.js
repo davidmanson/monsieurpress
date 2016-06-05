@@ -80,9 +80,9 @@ gulp.task('pot', function () {
     return gulp.src('./**/*.php')
         .pipe(sort())
         .pipe(wpPot( {
-            domain: 'mrpress',
-            destFile:'mrpress.pot',
-            package: 'mrpress',
+            domain: 'monsieurpress',
+            destFile:'monsieurpress.pot',
+            package: 'monsieurpress',
             lastTranslator: 'John Doe <mail@example.com>',
             team: 'Team Team <mail@example.com>'
         } ))

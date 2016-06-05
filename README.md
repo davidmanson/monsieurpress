@@ -29,7 +29,6 @@ I have some embeded gulp tasks that can be use for you workflow :
 
 ## Todo
 - Add rlt compatibility
-- Add a lightweight theme option page
 
 ## Note
 I'm very new and under development... Much better soon !

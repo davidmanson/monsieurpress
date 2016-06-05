@@ -57,8 +57,8 @@ if ( ! isset( $content_width ) ) {
 *************************************/
 $thumb_realisation_ratio = 1.5; // Using aspect ratio for WP 4.4 responsive image
 
-add_image_size( 'mrpress-small', 350, round(350/$thumb_realisation_ratio), true );
-add_image_size( 'mrpress-medium', 700, round(700/$thumb_realisation_ratio), true );
+add_image_size( 'monsieurpress-small', 350, round(350/$thumb_realisation_ratio), true );
+add_image_size( 'monsieurpress-medium', 700, round(700/$thumb_realisation_ratio), true );
 
 
 
@@ -66,8 +66,8 @@ add_image_size( 'mrpress-medium', 700, round(700/$thumb_realisation_ratio), true
  Menu
 *************************************/
 register_nav_menus(array(
-	'main-nav' => __( 'The Main Menu', 'mrpress' ),
-	'footer-links' => __( 'Footer Links', 'mrpress' )
+	'main-nav' => __( 'The Main Menu', 'monsieurpress' ),
+	'footer-links' => __( 'Footer Links', 'monsieurpress' )
 ));
 
 
@@ -79,8 +79,8 @@ register_nav_menus(array(
 function theme_sidebars() {
 	register_sidebar(array(
 		'id' => 'main-sidebar',
-		'name' => __( 'Main sidebar', 'mrpress' ),
-		'description' => __( 'The main sidebar', 'mrpress' ),
+		'name' => __( 'Main sidebar', 'monsieurpress' ),
+		'description' => __( 'The main sidebar', 'monsieurpress' ),
         'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
         'before_title' => '<div class="widgettitle">',
@@ -118,8 +118,8 @@ function front_assets_load() {
     if (is_admin()) return;
 
     /* Enqueue theme script & style */
-    wp_enqueue_style( 'mrpress-stylesheet', get_stylesheet_uri()  );
-    wp_enqueue_script( 'mrpress-js', get_template_directory_uri() . '/js/dist/scripts.js', array('jquery'), '20160207', true);
+    wp_enqueue_style( 'monsieurpress-stylesheet', get_stylesheet_uri()  );
+    wp_enqueue_script( 'monsieurpress-js', get_template_directory_uri() . '/js/dist/scripts.js', array('jquery'), '20160207', true);
 
     /* Enqueue comment-reply script if needed */
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
