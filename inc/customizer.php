@@ -24,9 +24,11 @@ function theme_customize_register( $wp_customize ) {
     // Settings definitions
     $wp_customize->add_setting( 'primary_cta_link' , array(
         'default'     => 'https://github.com/davidmanson/monsieurpress/archive/master.zip',
+        'sanitize_callback' => 'esc_url_raw'
     ) );
     $wp_customize->add_setting( 'secondary_cta_link' , array(
         'default'     => 'https://github.com/davidmanson/monsieurpress',
+        'sanitize_callback' => 'esc_url_raw'
     ) );
 
 
