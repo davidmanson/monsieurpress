@@ -25,12 +25,13 @@
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
     width: 40px;
     height: 40px;
     background-size: 10px;
     background-color: rgba(0,0,0,0.3);
-    /*background-color: transparent;*/
     background-repeat: no-repeat;
     background-position: center;
     z-index: 3;
@@ -40,7 +41,7 @@
 }
 
 .inline-slider .slick-arrow:hover{
-
+    background-color: rgba(0,0,0,0.6);
 }
 
 .inline-slider .slick-prev{
