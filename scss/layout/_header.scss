@@ -37,7 +37,7 @@ $margin-logo: ($header-height - $logo-height)/2;
     @include unvisible();
 
     position: absolute;
-    z-index: 100;
+    z-index: 99;
     top: 100%;
     left: 0;
 
@@ -124,7 +124,7 @@ $margin-logo: ($header-height - $logo-height)/2;
 -----------------------*/
 @media only screen and (min-width: $break-point) {
     .site-nav .sub-menu {
-        z-index: 100;
+        z-index: 99;
         position: absolute;
         right: 0;
         padding: 0;

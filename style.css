@@ -460,7 +460,7 @@ a:hover {
   visibility: hidden;
   opacity: 0;
   position: absolute;
-  z-index: 100;
+  z-index: 99;
   top: 100%;
   left: 0;
   width: 100%;
@@ -525,7 +525,7 @@ a:hover {
 -----------------------*/
 @media only screen and (min-width: 768px) {
   .site-nav .sub-menu {
-    z-index: 100;
+    z-index: 99;
     position: absolute;
     right: 0;
     padding: 0;
