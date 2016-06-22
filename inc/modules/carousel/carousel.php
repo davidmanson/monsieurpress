@@ -3,7 +3,7 @@
 /************************************
  Variables
 *************************************/
-$module_uri = get_template_directory_uri() . '/inc/modules/inline-gallery';
+$module_uri = get_template_directory_uri() . '/inc/modules/carousel';
 
 /************************************
  Add Assets
@@ -24,8 +24,8 @@ function gallery_assets_load() {
 
 
     // Plugin assets import
-    wp_enqueue_style( 'inline-slider-stylesheet', $module_uri . '/assets/css/inline-gallery.css' );
-    wp_enqueue_script( 'inline-slider-js', $module_uri . '/assets/javascript/inline-gallery.js', array('jquery'));
+    wp_enqueue_style( 'inline-slider-stylesheet', $module_uri . '/assets/css/carousel.css' );
+    wp_enqueue_script( 'inline-slider-js', $module_uri . '/assets/javascript/carousel.js', array('jquery'));
 
 }
 add_action('wp_enqueue_scripts', 'gallery_assets_load');

@@ -10,7 +10,7 @@ require_once( 'inc/helpers.php' );
 require_once( 'inc/customizer.php' );
 
 // Load modules
-require_once( 'inc/modules/inline-gallery/inline-gallery.php' );
+require_once( 'inc/modules/carousel/carousel.php' );
 
 
 
