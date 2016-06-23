@@ -123,33 +123,12 @@ function front_assets_load() {
     wp_enqueue_style( 'monsieurpress-stylesheet', get_stylesheet_uri()  );
     wp_enqueue_script( 'monsieurpress-js', get_template_directory_uri() . '/js/dist/scripts.js', array('jquery'), '20160207', true);
 
+    /* Enqueue google font */
+    wp_enqueue_style( 'google-font', 'https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,400i,700');
+
     /* Enqueue comment-reply script if needed */
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
 add_action('wp_enqueue_scripts', 'front_assets_load');
-
-
-
-/************************************
- Async Font Load
-*************************************/
-function add_load_web_font(){
-?>
-<script type="text/javascript">
-  WebFontConfig = {
-    google: { families: [ 'Roboto:400,700,400italic,300:latin', 'Roboto+Slab:400,700:latin' ] }
-  };
-  (function() {
-    var wf = document.createElement('script');
-    wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-    wf.type = 'text/javascript';
-    wf.async = 'true';
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(wf, s);
-  })();
-</script>
-<?php
-}
-add_action( 'wp_head', 'add_load_web_font');

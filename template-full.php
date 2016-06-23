@@ -1,6 +1,9 @@
 <?php
 /*
- Template Name: Full width
+ * Template Name: Full width
+ *
+ * Because this is a full template, we only put the header & the footer
+ * There is no container, so it's perfect for using a page builder for exemple.
 */
 ?>
 
