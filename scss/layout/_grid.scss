@@ -48,7 +48,7 @@ $desktop: new-breakpoint(min-width 980px);
 @include media($desktop) {
     @for $i from 1 through 10 {
         .l-col-push-#{$i} {
-            margin-left: 100% / 12 * $i;
+            @include shift($i);
         }
     }
 }
