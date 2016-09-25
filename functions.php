@@ -9,10 +9,6 @@
 require_once( 'inc/helpers.php' );
 require_once( 'inc/customizer.php' );
 
-// Load modules
-require_once( 'inc/modules/carousel/carousel.php' );
-
-
 
 /************************************
 Let's get everything up and running.
@@ -52,15 +48,6 @@ if ( ! isset( $content_width ) ) {
 	$content_width = 680;
 }
 
-
-
-/************************************
- Thumbnail size
-*************************************/
-$thumb_realisation_ratio = 1.5; // Using aspect ratio for WP 4.4 responsive image
-
-add_image_size( 'monsieurpress-small', 350, round(350/$thumb_realisation_ratio), true );
-add_image_size( 'monsieurpress-medium', 700, round(700/$thumb_realisation_ratio), true );
 
 
 

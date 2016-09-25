@@ -384,6 +384,7 @@ body {
   font-size: 100%;
   line-height: 1.6;
   color: #3A3A3A;
+  background: #f8f8f8;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
@@ -441,7 +442,8 @@ a:hover {
 .header {
   background-color: #FFFFFF;
   border-bottom: 1px solid #f5f5f5;
-  position: relative; }
+  position: relative;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.22); }
 
 /*----------------------
    Logo
@@ -552,6 +554,10 @@ a:hover {
   font-size: 12px;
   color: #393d40; }
 
+.footer-links > ul {
+  list-style: none;
+  padding: 0; }
+
 /*----------------------
    Section style
 -----------------------*/
@@ -587,7 +593,7 @@ html {
   .l-container::after {
     clear: both;
     content: "";
-    display: table; }
+    display: block; }
 
 /*-----------------------
     Columns Desktop
@@ -906,7 +912,6 @@ html {
    Widgets style
 -----------------------*/
 .widgets .widget {
-  border-top: 3px solid #393d40;
   margin-bottom: 1em; }
 
 .widgets .widgettitle {
@@ -1004,6 +1009,13 @@ input[type="submit"]:visited {
     font-weight: bold; }
   .entry-content dd, .wp-editor dd {
     margin: 0 1.5em 1.5em; }
+
+/*----------------------
+   Responsive image
+-----------------------*/
+.wp-post-image {
+  width: 100%;
+  height: auto; }
 
 /*----------------------
    Sticky post
