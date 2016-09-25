@@ -493,7 +493,8 @@ a:hover {
   .site-nav {
     max-height: none;
     width: auto;
-    float: right; }
+    float: right;
+    overflow: visible; }
     .site-nav ul {
       margin-top: 0; }
     .site-nav li {
@@ -514,7 +515,7 @@ a:hover {
 -----------------------*/
 @media only screen and (min-width: 768px) {
   .site-nav .sub-menu {
-    z-index: 99;
+    z-index: 9999;
     position: absolute;
     right: 0;
     padding: 0;

@@ -78,6 +78,7 @@ $margin-logo: ($header-height - $logo-height)/2;
         max-height: none;
         width: auto;
         float: right;
+        overflow: visible;
 
         ul {
             margin-top: 0;
@@ -106,7 +107,7 @@ $margin-logo: ($header-height - $logo-height)/2;
 -----------------------*/
 @media only screen and (min-width: $break-point) {
     .site-nav .sub-menu {
-        z-index: 99;
+        z-index: 9999;
         position: absolute;
         right: 0;
         padding: 0;
