@@ -442,7 +442,6 @@ a:hover {
 .header {
   background-color: #FFFFFF;
   border-bottom: 1px solid #f5f5f5;
-  position: relative;
   box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.22); }
 
 /*----------------------
