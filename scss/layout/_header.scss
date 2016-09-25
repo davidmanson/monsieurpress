@@ -32,35 +32,22 @@ $margin-logo: ($header-height - $logo-height)/2;
 
 
 /*-----------------------
-    Mobile menu layout
+     Mobile menu
 -------------------------*/
 .site-nav {
-    @include unvisible();
-
-    position: absolute;
-    z-index: 99;
-    top: 100%;
-    left: 0;
-
+    max-height: 0;
     width: 100%;
-    transition: all .2s ease-in-out;
-
+    transition: max-height .2s ease-in-out;
+    overflow: hidden;
     background: white;
-    .no-js &,
-    .is-menu-on & {
-        @include visible();
-    }
-}
 
-
-
-/*----------------------
-    Mobile menu style
------------------------*/
-.site-nav {
     ul {
         list-style: none;
-        padding-left: 1em;
+        padding: 0;
+        margin: 0;
+    }
+    li{
+        text-align: center;
     }
     li > a {
         color: $gray;
@@ -73,8 +60,11 @@ $margin-logo: ($header-height - $logo-height)/2;
             color: $main-color;
         }
     }
+    .no-js &,
+    .is-menu-on & {
+        max-height: 300px;
+    }
 }
-
 
 
 /*-----------------------------
@@ -85,25 +75,16 @@ $margin-logo: ($header-height - $logo-height)/2;
         display: none;
     }
     .site-nav {
-        @include visible();
-        position: static;
+        max-height: none;
         width: auto;
         float: right;
-    }
-}
 
-
-
-/*---------------------------
-   Navigation desktop style
-----------------------------*/
-@media only screen and (min-width: $break-point) {
-    .site-nav {
         ul {
             margin-top: 0;
         }
         li {
-            float: left;
+            display: inline-block;
+            text-align: left;
             position: relative;
         }
         li a {
