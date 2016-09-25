@@ -14,14 +14,18 @@ if ( post_password_required() ) { return; }
     </h3>
 
     <section class="commentlist">
+
+        <!-- The comment list -->
         <?php wp_list_comments(); ?>
 
+        <!-- The comment pagination -->
         <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
             <div class="pagination">
                 <?php paginate_comments_links() ?>
             </div>
         <?php endif; ?>
 
+        <!-- No comment -->
         <?php if ( ! comments_open() ) : ?>
             <p class="no-comments">
                 <?php _e( 'Comments are closed.' , 'monsieurpress' ); ?>

@@ -6,8 +6,10 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
+	<!-- The thumbnail -->
 	<?php the_post_thumbnail('medium'); ?>
 
+	<!-- Post header -->
 	<header class="entry-header">
 		<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
         <aside class="entry-meta">
@@ -15,7 +17,9 @@
         </aside>
 	</header>
 
+	<!-- Post excerpt -->
 	<div class="entry-content">
 		<?php the_excerpt(); ?>
 	</div>
+	
 </article>
