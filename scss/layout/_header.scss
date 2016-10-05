@@ -12,7 +12,6 @@ $margin-logo: ($header-height - $logo-height)/2;
 -----------------------*/
 .header {
     background-color: $white;
-    border-bottom: 1px solid $light-gray;
     box-shadow: 0 0 3px 0 rgba(0,0,0,0.22);
 }
 
@@ -22,7 +21,6 @@ $margin-logo: ($header-height - $logo-height)/2;
 -----------------------*/
 .site-logo img {
     float: left;
-    display: block;
     width: auto;
     height: $logo-height;
     margin: $margin-logo 0;
@@ -44,8 +42,6 @@ $margin-logo: ($header-height - $logo-height)/2;
         list-style: none;
         padding: 0;
         margin: 0;
-    }
-    li{
         text-align: center;
     }
     li > a {
@@ -79,9 +75,6 @@ $margin-logo: ($header-height - $logo-height)/2;
         float: right;
         overflow: visible;
 
-        ul {
-            margin-top: 0;
-        }
         li {
             display: inline-block;
             text-align: left;
