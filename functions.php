@@ -21,7 +21,6 @@ function theme_init() {
 add_action( 'after_setup_theme', 'theme_init' );
 
 
-
 /*********************
 THEME SUPPORT
 *********************/
@@ -40,15 +39,12 @@ function theme_support() {
 }
 
 
-
 /************************************
   Oembed size option
 *************************************/
 if ( ! isset( $content_width ) ) {
 	$content_width = 680;
 }
-
-
 
 
 /************************************
@@ -58,8 +54,6 @@ register_nav_menus(array(
 	'main-nav' => __( 'The Main Menu', 'monsieurpress' ),
 	'footer-links' => __( 'Footer Links', 'monsieurpress' )
 ));
-
-
 
 
 /************************************
@@ -108,7 +102,7 @@ function front_assets_load() {
 
     /* Enqueue theme script & style */
     wp_enqueue_style( 'monsieurpress-stylesheet', get_stylesheet_uri()  );
-    wp_enqueue_script( 'monsieurpress-js', get_template_directory_uri() . '/js/dist/scripts.js', array('jquery'), '20160207', true);
+    wp_enqueue_script( 'monsieurpress-js', get_template_directory_uri() . '/javascript/dist/scripts.js', array('jquery'));
 
     /* Enqueue google font */
     wp_enqueue_style( 'google-font', 'https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,400i,700');
