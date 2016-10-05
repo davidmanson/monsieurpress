@@ -18,11 +18,16 @@ Tags: right-sidebar, custom-menu, sticky-post
 
 
 //---------------------
+// IMPORTING VENDOR
+//---------------------
+@import "vendor/_normalize";
+
+
+//---------------------
 // IMPORTING BASE
 //---------------------
 @import "base/_config";
 @import "base/_utils";
-@import "base/_normalize";
 @import "base/_typography";
 
 
