@@ -10,7 +10,7 @@
     <main class="l-col-10 l-col-push-1" role="main">
         <?php
         while (have_posts()) : the_post();
-            get_template_part( 'partials/content', 'page' );
+            get_template_part( 'template-parts/content', 'single' );
             comments_template();
         endwhile;
         ?>
