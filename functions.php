@@ -6,25 +6,13 @@
 
 
 // Load dependencies
-require_once( 'inc/helpers.php' );
 require_once( 'inc/customizer.php' );
 
 
-/************************************
-Let's get everything up and running.
-*************************************/
-function theme_init() {
-  add_action( 'init', 'head_cleanup' );
-  add_action( 'init', 'theme_support' );
-  add_action( 'init', 'theme_filters');
-}
-add_action( 'after_setup_theme', 'theme_init' );
-
-
 /*********************
-THEME SUPPORT
+THEME INIT
 *********************/
-function theme_support() {
+function theme_init() {
 	add_theme_support( 'post-thumbnails' );
 	add_theme_support( 'automatic-feed-links');
 	add_theme_support( 'menus' );
@@ -37,6 +25,8 @@ function theme_support() {
 		'comment-form'
 	) );
 }
+add_action( 'after_setup_theme', 'theme_init' );
+
 
 
 /************************************
@@ -47,6 +37,7 @@ if ( ! isset( $content_width ) ) {
 }
 
 
+
 /************************************
  Menu
 *************************************/
@@ -54,6 +45,7 @@ register_nav_menus(array(
 	'main-nav' => __( 'The Main Menu', 'monsieurpress' ),
 	'footer-links' => __( 'Footer Links', 'monsieurpress' )
 ));
+
 
 
 /************************************
@@ -85,16 +77,6 @@ add_action( 'init', 'theme_add_editor_styles' );
 
 
 /************************************
- Theme filters
-*************************************/
-function theme_filters(){
-    add_filter( 'the_content', 'remove_ptags_on_images' );
-    add_filter( 'excerpt_more', 'custom_excerpt_more' );
-}
-
-
-
-/************************************
  Assets
 *************************************/
 function front_assets_load() {
@@ -103,9 +85,6 @@ function front_assets_load() {
     /* Enqueue theme script & style */
     wp_enqueue_style( 'monsieurpress-stylesheet', get_stylesheet_uri()  );
     wp_enqueue_script( 'monsieurpress-js', get_template_directory_uri() . '/javascript/dist/scripts.js', array('jquery'));
-
-    /* Enqueue google font */
-    wp_enqueue_style( 'google-font', 'https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,400i,700');
 
     /* Enqueue comment-reply script if needed */
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

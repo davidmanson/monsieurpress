@@ -429,7 +429,7 @@ template {
      Setting up
 ------------------------*/
 body {
-  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 100%;
   line-height: 1.6;
   color: #3A3A3A;
@@ -462,7 +462,7 @@ ul {
   padding: 0 0 1.75em 1.25em; }
 
 h1, h2, h3, h4 {
-  font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #00749A;
   font-weight: 400; }
 
@@ -1118,15 +1118,15 @@ input[type="submit"]:visited {
 
 /* at this larger size, we can start to align images */
 @media only screen and (min-width: 481px) {
-  .entry-content .alignleft, .wp-editor .alignleft, .entry-content img.alignleft, .wp-editor img.alignleft {
+  .alignleft, img.alignleft {
     margin-right: 1.5em;
     display: inline;
     float: left; }
-  .entry-content .alignright, .wp-editor .alignright, .entry-content img.alignright, .wp-editor img.alignright {
+  .alignright, img.alignright {
     margin-left: 1.5em;
     display: inline;
     float: right; }
-  .entry-content .aligncenter, .wp-editor .aligncenter, .entry-content img.aligncenter, .wp-editor img.aligncenter {
+  .aligncenter, img.aligncenter {
     margin-right: auto;
     margin-left: auto;
     display: block;
