@@ -27,6 +27,17 @@ $margin-logo: ($header-height - $logo-height)/2;
 }
 
 
+/*----------------------
+   Mobile menu button
+-----------------------*/
+.menu-btn{
+    float: right;
+    margin-top: 12px;
+    @media only screen and (min-width: $break-point) {
+        display: none !important;
+    }
+}
+
 
 /*-----------------------
      Mobile menu
@@ -66,9 +77,6 @@ $margin-logo: ($header-height - $logo-height)/2;
    Navigation desktop layout
 ------------------------------*/
 @media only screen and (min-width: $break-point) {
-    .menu-icon {
-        display: none;
-    }
     .site-nav {
         max-height: none;
         width: auto;

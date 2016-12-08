@@ -25,9 +25,7 @@
                     </a>
 
                     <!-- mobile button menu -->
-                    <div class="menu-icon js-menu-toggle" id="js-menu-toggle">
-                      <span></span>
-                    </div>
+                    <button class="btn js-menu-toggle menu-btn">Menu</button>
 
                     <!-- menu -->
                     <nav class="site-nav">
