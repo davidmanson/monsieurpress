@@ -36,7 +36,7 @@ body{ font-size: modular-scale(0); }
 h1, h2, h3, h4{
 	font-family: $secondary-font;
 	color: $main-color;
-	font-weight: 400;
+	font-weight: bold;
 }
 
 
@@ -46,7 +46,6 @@ h1, h2, h3, h4{
 ------------------------*/
 a,
 a:visited,
-a:hover,
 a:focus,
 a:active {
 	color: $main-color;

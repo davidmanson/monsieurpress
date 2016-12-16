@@ -107,8 +107,8 @@ $margin-logo: ($header-height - $logo-height)/2;
 -----------------------*/
 @media only screen and (min-width: $break-point) {
     .site-nav .sub-menu {
-        z-index: 9999;
         position: absolute;
+        z-index: 100;
         right: 0;
         padding: 0;
         background: $light-gray;
@@ -124,6 +124,7 @@ $margin-logo: ($header-height - $logo-height)/2;
     .site-nav .menu-item-has-children {
         .sub-menu {
             @include unvisible();
+            z-index: 100;
             transition: all 0.3s ease-in-out;
         }
         &:hover .sub-menu {

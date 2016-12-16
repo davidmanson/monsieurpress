@@ -464,14 +464,13 @@ ul {
 h1, h2, h3, h4 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #00749A;
-  font-weight: 400; }
+  font-weight: bold; }
 
 /*-----------------------
     Link Styles
 ------------------------*/
 a,
 a:visited,
-a:hover,
 a:focus,
 a:active {
   color: #00749A;
@@ -566,8 +565,8 @@ a:hover {
 -----------------------*/
 @media only screen and (min-width: 768px) {
   .site-nav .sub-menu {
-    z-index: 9999;
     position: absolute;
+    z-index: 100;
     right: 0;
     padding: 0;
     background: #f5f5f5; } }
@@ -579,6 +578,7 @@ a:hover {
   .site-nav .menu-item-has-children .sub-menu {
     visibility: hidden;
     opacity: 0;
+    z-index: 100;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out; }
   .site-nav .menu-item-has-children:hover .sub-menu {
@@ -962,15 +962,10 @@ input[type="submit"]:visited {
     background: #f5f5f5;
     padding: 1.5em;
     margin: 0 0 1.5em;
-    border-radius: 3px;
     overflow-x: scroll; }
   .entry-content ul, .wp-editor ul {
     list-style: disc;
     padding-left: 2em; }
-  .entry-content dt, .wp-editor dt {
-    font-weight: bold; }
-  .entry-content dd, .wp-editor dd {
-    margin: 0 1.5em 1.5em; }
 
 /*----------------------
    Responsive image
@@ -1047,14 +1042,8 @@ input[type="submit"]:visited {
   border: 1px solid #aebdc1;
   margin-bottom: 1.5em; }
 
-.entry-content tr, .wp-editor tr {
-  border-bottom: 1px solid #aebdc1; }
-
 .entry-content td, .wp-editor td {
   padding: 7px; }
-
-.entry-content th, .wp-editor th {
-  border-bottom: 1px solid #aebdc1; }
 
 /* at this larger size, we can start to align images */
 @media only screen and (min-width: 481px) {

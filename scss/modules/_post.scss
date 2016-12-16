@@ -26,7 +26,6 @@
         background: $light-gray;
         padding: 1.5em;
         margin: 0 0 1.5em;
-        border-radius: 3px;
         overflow-x: scroll;
     }
 
@@ -34,14 +33,6 @@
         list-style: disc;
         padding-left: 2em;
     }
-
-	dt{
-		font-weight: bold;
-	}
-
-	dd {
-		margin: 0 1.5em 1.5em;
-	}
 
 }
 
@@ -130,16 +121,8 @@
         margin-bottom: 1.5em;
     }
 
-    tr {
-        border-bottom: 1px solid $gray;
-    }
-
     td {
         padding: 7px;
-    }
-
-    th {
-        border-bottom: 1px solid $gray;
     }
 }
 
