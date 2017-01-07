@@ -5,10 +5,6 @@
  ************************************/
 
 
-// Load dependencies
-require_once( 'inc/customizer.php' );
-
-
 /*********************
 THEME INIT
 *********************/
