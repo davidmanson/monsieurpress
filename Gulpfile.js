@@ -21,7 +21,7 @@ var eyeglass = require("eyeglass");
  * - Reload browser (if live reload installed)
  -------------------------------------------*/
 gulp.task('styles', function() {
-    gulp.src('scss/**/*.scss')
+    gulp.src('assets/scss/**/*.scss')
         .pipe(plumber())
         .pipe(sass(eyeglass()))
         .pipe(autoprefixer())
@@ -49,7 +49,7 @@ gulp.task('minify', function () {
  * - Launch the task before production
  -------------------------------------------*/
 gulp.task('images', function() {
-    gulp.src('images/*')
+    gulp.src('assets/images/*')
         .pipe(imagemin({
             progressive: true,
             svgoPlugins: [{removeViewBox: false}],
@@ -65,7 +65,7 @@ gulp.task('images', function() {
  * - Launch the task before production
  -------------------------------------------*/
 gulp.task('compress', function() {
-    gulp.src('javascript/src/*.js')
+    gulp.src('assets/javascript/src/*.js')
         .pipe(uglify())
         .pipe(gulp.dest('javascript/dist/'));
 });
@@ -97,6 +97,6 @@ gulp.task('pot', function () {
  -------------------------------------------*/
 gulp.task('default',function() {
     livereload.listen();
-    gulp.watch('scss/**/*.scss',['styles']);
-    gulp.watch('javascript/src/*.js',['compress']);
+    gulp.watch('assets/scss/**/*.scss',['styles']);
+    gulp.watch('assets/javascript/src/*.js',['compress']);
 });

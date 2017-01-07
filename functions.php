@@ -84,7 +84,7 @@ function front_assets_load() {
 
     /* Enqueue theme script & style */
     wp_enqueue_style( 'monsieurpress-stylesheet', get_stylesheet_uri()  );
-    wp_enqueue_script( 'monsieurpress-js', get_template_directory_uri() . '/javascript/dist/scripts.js', array('jquery'));
+    wp_enqueue_script( 'monsieurpress-js', get_template_directory_uri() . '/assets/javascript/dist/scripts.js', array('jquery'));
 
     /* Enqueue comment-reply script if needed */
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
